@@ -1,0 +1,28 @@
+a.confirmButton {
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #5366a7;
+    padding: 15px 25px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-left: 15%;
+    margin-bottom: 15px;
+}
+a.backButton {
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #171718;
+    padding: 15px 25px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-left: 1%;
+    margin-bottom: 15px;
+}
