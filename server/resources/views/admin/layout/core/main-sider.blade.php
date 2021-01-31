@@ -14,14 +14,13 @@
                      src="" class="img-circle elevation-2"
                      alt="User Image">
             </div>
-{{--            <div class="info">--}}
-{{--                <a href="{{route('admin.dashboard')}}" class="d-block">--}}
-{{--                    {{\Illuminate\Support\Facades\Auth::user()->name}}--}}
-{{--                    <br>--}}
-{{--                    <i>Role: <b>{{\Illuminate\Support\Facades\Auth::user()->role->name}}</b></i>--}}
-{{--                </a>--}}
-{{--                <a href="{{route('users.show',\Illuminate\Support\Facades\Auth::user()->id)}}">Profile</a>--}}
-{{--            </div>--}}
+            <div class="info">
+                <a href="{{route('admin.dashboard')}}" class="d-block">
+                    {{\Illuminate\Support\Facades\Auth::user()->name}}
+                    <br>
+                    <i> <b>{{\Illuminate\Support\Facades\Auth::user()->role->name}}</b></i>
+                </a>
+            </div>
         </div>
 
         <!-- Sidebar Menu -->
@@ -38,61 +37,35 @@
                         </p>
                     </a>
                 </li>
-{{--                @if(\Illuminate\Support\Facades\Auth::user()->role_id == \App\Models\RoleConstants::ROLE_ADMIN)--}}
-{{--                    <li class="nav-item has-treeview  ">--}}
-{{--                        <a href="#"--}}
-{{--                           class="nav-link">--}}
-{{--                            <i class="nav-icon fas fa-user"></i>--}}
-{{--                            <p>--}}
-{{--                                Manage User--}}
-{{--                                <i class="right fas fa-angle-left"></i>--}}
-{{--                            </p>--}}
-{{--                        </a>--}}
-{{--                        <ul class="nav nav-treeview">--}}
-{{--                            <li class="nav-item">--}}
-{{--                                <a href="{{route('users.index')}}"--}}
-{{--                                   class="nav-link ">--}}
-{{--                                    <i class="far fa-circle nav-icon"></i>--}}
-{{--                                    <p>Users List</p>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-{{--                            <li class="nav-item">--}}
-{{--                                <a href="{{route('users.create')}}"--}}
-{{--                                   class="nav-link ">--}}
-{{--                                    <i class="far fa-circle nav-icon"></i>--}}
-{{--                                    <p>Add User</p>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-{{--                        </ul>--}}
-{{--                    </li>--}}
-{{--                @endif--}}
+                @if(\Illuminate\Support\Facades\Auth::user()->role_id == \App\Models\RoleConstants::ROLE_ADMIN)
+                    <li class="nav-item has-treeview  ">
+                        <a href="#"
+                           class="nav-link">
+                            <i class="nav-icon fas fa-user"></i>
+                            <p>
+                                Manage User
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{route('users.index')}}"
+                                   class="nav-link ">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Users List</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('users.create')}}"
+                                   class="nav-link ">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Add User</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                @endif
 
-                <li class="nav-item has-treeview ">
-                    <a href="#"
-                       class="nav-link ">
-                        <i class="nav-icon fas fa-layer-group"></i>
-                        <p>
-                            Manage Users
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#"
-                               class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Users List</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#"
-                               class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Add User</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
                 <li class="nav-item has-treeview">
                     <a href="#"
                        class="nav-link ">
