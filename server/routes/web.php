@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
+
 use App\Http\Controllers\CityController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,8 +47,8 @@ Route::middleware('auth')->prefix('admin')->group(function (){
 
 
 
+//Route::get('{any}', function () {
+//    return view('client');
+//})->where('any','.*');
 
-Route::get('{any}', function () {
-    return view('client');
-})->where('any','.*');
 
