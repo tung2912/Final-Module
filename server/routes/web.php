@@ -13,11 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+
+Route::get('/admin',function () {
+    return view('admin.users.add');
+});
+
 //Route::get('{any}', function () {
 //    return view('client');
 //})->where('any','.*');
-
-
-Route::get('/',function () {
-    return view('admin.users.add');
-});
