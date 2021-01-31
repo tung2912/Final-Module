@@ -33,4 +33,30 @@ class Estate extends Model
     public function client() {
         return $this->belongsTo(Client::class,'client_id');
     }
+
+    public function getStatus() {
+        if($this->status == 1) {
+            return "WAITING";
+        }
+        elseif($this->status == 2) {
+            return "APPROVE";
+        }
+        elseif ($this->status == 3) {
+            return "CANCEL";
+        }
+        else return "DONE";
+    }
+
+    public function getBadge() {
+        if($this->status == 1) {
+            return "badge-warning";
+        }
+        elseif($this->status == 2) {
+            return "badge-info";
+        }
+        elseif ($this->status == 3) {
+            return "badge-danger";
+        }
+        else return "badge-success";
+    }
 }

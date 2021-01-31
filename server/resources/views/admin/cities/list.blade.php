@@ -12,7 +12,7 @@
                             <div class="row">
                                 <div class="col-12 col-md-6"></div>
                                 <div class="col-12 col-md-6" style="text-align: right">
-                                    <a href="{{ route('cities.add') }}" class="btn btn-success">+ Add City</a>
+                                    <a href="{{ route('cities.create') }}" class="btn btn-success">+ Add City</a>
                                 </div>
                             </div>
                         </div>

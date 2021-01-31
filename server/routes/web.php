@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CityController;
+use App\Http\Controllers\EstateController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,11 +28,17 @@ Route::middleware('auth')->prefix('admin')->group(function (){
 
     Route::prefix('cities')->group(function () {
         Route::get('/', [CityController::class, 'index'])->name('cities.index');
-        Route::get('/create', [CityController::class, 'create'])->name('cities.add');
+        Route::get('/create', [CityController::class, 'create'])->name('cities.create');
         Route::post('/create', [CityController::class, 'store'])->name('cities.store');
         Route::get('{id}/edit', [CityController::class, 'edit'])->name('cities.edit');
         Route::post('{id}/edit', [CityController::class, 'update'])->name('cities.update');
         Route::get('{id}/delete', [CityController::class, 'delete'])->name('cities.delete');
+    });
+
+    Route::prefix('estates')->group(function () {
+        Route::get('/', [EstateController::class, 'index'])->name('estates.index');
+        Route::get('detail/{id}', [EstateController::class, 'getEstateById'])->name('estates.detail');
+        Route::post('changeStatus/{id}/', [EstateController::class, 'changeEstateStatus'])->name('estates.changeStatus');
     });
 
 });
