@@ -30,9 +30,9 @@ Route::middleware('auth')->prefix('admin')->group(function (){
         Route::get('/', [CityController::class, 'index'])->name('cities.index');
         Route::get('/create', [CityController::class, 'create'])->name('cities.create');
         Route::post('/create', [CityController::class, 'store'])->name('cities.store');
-        Route::get('{id}/edit', [CityController::class, 'edit'])->name('cities.edit');
-        Route::post('{id}/edit', [CityController::class, 'update'])->name('cities.update');
-        Route::get('{id}/delete', [CityController::class, 'delete'])->name('cities.delete');
+        Route::get('/edit/city_id', [CityController::class, 'edit'])->name('cities.edit');
+        Route::post('/edit/city_id', [CityController::class, 'update'])->name('cities.update');
+        Route::get('/delete/city_id', [CityController::class, 'delete'])->name('cities.delete');
     });
 
     Route::prefix('estates')->group(function () {
