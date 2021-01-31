@@ -31,14 +31,8 @@
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                 <span class="dropdown-item dropdown-header">15 Notifications</span>
                 <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">
-                    <i class="fas fa-envelope mr-2"></i> 4 new messages
-                    <span class="float-right text-muted text-sm">3 mins</span>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">
-                    <i class="fas fa-users mr-2"></i> 8 friend requests
-                    <span class="float-right text-muted text-sm">12 hours</span>
+                <a href="{{route('users.profile',\Illuminate\Support\Facades\Auth::user()->id)}}" class="dropdown-item">
+                    <i class="fas fa-users mr-2"></i> Profile
                 </a>
                 <div class="dropdown-divider"></div>
                 <a href="#" class="dropdown-item">
@@ -46,7 +40,7 @@
                     <span class="float-right text-muted text-sm">2 days</span>
                 </a>
                 <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+                <a href="{{route('admin.logout')}}" class="dropdown-item dropdown-footer">Logout</a>
             </div>
         </li>
         <li class="nav-item">
