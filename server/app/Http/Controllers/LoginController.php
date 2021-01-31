@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use http\Client\Curl\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Psy\CodeCleaner\AssignThisVariablePass;
