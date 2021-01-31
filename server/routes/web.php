@@ -35,36 +35,36 @@ Route::middleware('auth')->prefix('admin')->group(function (){
 
 
     Route::prefix('users')->group(function () {
-        Route::get('',[UserController::class,'index'])->name('users.index');
-        Route::get('/create',[UserController::class,'create'])->name('users.create');
-        Route::post('/create',[UserController::class,'store'])->name('users.store');
-        Route::get('/edit/{user_id}',[UserController::class,'edit'])->name('users.edit');
-        Route::post('/edit/{user_id}',[UserController::class,'update'])->name('users.update');
-        Route::get('/delete/{user_id}',[UserController::class,'delete'])->name('users.delete');
-        Route::get('/profile/{user_id}',[UserController::class,'profile'])->name('users.profile');
-        Route::get('/staffEdit/{user_id}',[UserController::class,'staffEdit'])->name('users.staffEdit');
-        Route::post('/staffEdit/{user_id}',[UserController::class,'staffUpdate'])->name('users.staffUpdate');
+        Route::get('', [UserController::class, 'index'])->name('users.index');
+        Route::get('/create', [UserController::class, 'create'])->name('users.create');
+        Route::post('/create', [UserController::class, 'store'])->name('users.store');
+        Route::get('/edit/{user_id}', [UserController::class, 'edit'])->name('users.edit');
+        Route::post('/edit/{user_id}', [UserController::class, 'update'])->name('users.update');
+        Route::get('/delete/{user_id}', [UserController::class, 'delete'])->name('users.delete');
+        Route::get('/profile/{user_id}', [UserController::class, 'profile'])->name('users.profile');
+        Route::get('/staffEdit/{user_id}', [UserController::class, 'staffEdit'])->name('users.staffEdit');
+        Route::post('/staffEdit/{user_id}', [UserController::class, 'staffUpdate'])->name('users.staffUpdate');
+
+    });
 
     Route::prefix('cities')->group(function () {
         Route::get('/', [CityController::class, 'index'])->name('cities.index');
         Route::get('/create', [CityController::class, 'create'])->name('cities.create');
         Route::post('/create', [CityController::class, 'store'])->name('cities.store');
-<<<<<<< HEAD
-        Route::get('/edit/city_id', [CityController::class, 'edit'])->name('cities.edit');
-        Route::post('/edit/city_id', [CityController::class, 'update'])->name('cities.update');
-        Route::get('/delete/city_id', [CityController::class, 'delete'])->name('cities.delete');
-=======
-        Route::get('{id}/edit', [CityController::class, 'edit'])->name('cities.edit');
-        Route::post('{id}/edit', [CityController::class, 'update'])->name('cities.update');
-        Route::get('{id}/delete', [CityController::class, 'delete'])->name('cities.delete');
+        Route::get('/edit/{city_id}', [CityController::class, 'edit'])->name('cities.edit');
+        Route::post('/edit/{city_id}', [CityController::class, 'update'])->name('cities.update');
+        Route::get('/delete/{city_id}', [CityController::class, 'delete'])->name('cities.delete');
+        Route::get('/edit/{city_id}', [CityController::class, 'edit'])->name('cities.edit');
+        Route::post('/edit/{city_id}', [CityController::class, 'update'])->name('cities.update');
+        Route::get('/delete/{city_id}', [CityController::class, 'delete'])->name('cities.delete');
 
->>>>>>> 83017e89f73f4f94448051721a62d0a692a3db61
     });
 
     Route::prefix('estates')->group(function () {
         Route::get('/', [EstateController::class, 'index'])->name('estates.index');
         Route::get('detail/{id}', [EstateController::class, 'getEstateById'])->name('estates.detail');
-        Route::post('changeStatus/{id}/', [EstateController::class, 'changeEstateStatus'])->name('estates.changeStatus');
+        Route::post('changeStatus/{status_id}/', [EstateController::class, 'changeEstateStatus'])->name('estates.changeStatus');
+        Route::get('EstateStatus/{status_id}/', [EstateController::class, 'showEstateStatusById'])->name('estates.showEstateStatusById');
     });
 
 });
