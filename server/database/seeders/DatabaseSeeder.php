@@ -13,6 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        // \App\Models\User::factory(10)->create();
+
         $this->call([
             RoleSeeder::class,
             UserSeeder::class,
@@ -20,5 +22,6 @@ class DatabaseSeeder extends Seeder
             ClientSeeder::class,
             EstateSeeder::class
         ]);
+
     }
 }
