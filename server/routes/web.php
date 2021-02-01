@@ -9,6 +9,8 @@ use App\Http\Controllers\UserController;
 
 use App\Http\Controllers\CityController;
 
+use App\Http\Controllers\EstateController;
+
 
 use Illuminate\Support\Facades\Route;
 
@@ -22,13 +24,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-
-
-
-
-
 
 
 Route::get('/login',[LoginController::class,'showLogin'])->name('login');
@@ -74,7 +69,20 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     });
 });
 
+        Route::get('/edit/{city_id}', [CityController::class, 'edit'])->name('cities.edit');
+        Route::post('/edit/{city_id}', [CityController::class, 'update'])->name('cities.update');
+        Route::get('/delete/{city_id}', [CityController::class, 'delete'])->name('cities.delete');
 
+    });
+
+    Route::prefix('estates')->group(function () {
+        Route::get('/', [EstateController::class, 'index'])->name('estates.index');
+        Route::get('detail/{id}', [EstateController::class, 'getEstateById'])->name('estates.detail');
+        Route::post('changeStatus/{status_id}/', [EstateController::class, 'changeEstateStatus'])->name('estates.changeStatus');
+        Route::get('EstateStatus/{status_id}/', [EstateController::class, 'showEstateStatusById'])->name('estates.showEstateStatusById');
+    });
+
+});
 
 //Route::get('{any}', function () {
 //    return view('client');

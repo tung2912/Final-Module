@@ -18,4 +18,8 @@ class Image extends Model
         return $this->belongsTo(Estate::class,'estate_id');
     }
 
+    function getNameImage(){
+        return '/storage/images/' .ltrim($this->image, '/public/images/');
+    }
+
 }

@@ -31,13 +31,13 @@
 
                             <div class="form-group">
                                 <label for="inputStatus">Employee</label>
-                                {{--                                <select name="user_id" class="form-control custom-select">--}}
-                                {{--                                    @foreach($users as $key => $user)--}}
-                                {{--                                        <option--}}
-                                {{--                                            value="{{$user->id}}">{{$user->name}}</option>--}}
-                                {{--                                    @endforeach--}}
-                                {{--                                </select>--}}
-                                @error('role_id')
+                                <select name="user_id" class="form-control custom-select">
+                                    @foreach($users as $key => $user)
+                                        <option
+                                            value="{{$user->id}}">{{$user->name}}</option>
+                                    @endforeach
+                                </select>
+                                @error('user_id')
                                 <div style="color: red">{{ $message }}</div>
                                 @enderror
                             </div>

@@ -84,7 +84,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#"
+                            <a href="{{ route('cities.create') }}"
                                class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Add City </p>
@@ -103,17 +103,42 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#"
+                            <a href="{{ route('estates.index') }}"
                                class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Estates List</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#"
+                            <a href=" {{ route('estates.showEstateStatusById', 1) }}"
                                class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Add Estate </p>
+                                <p>Waiting Estate </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('estates.showEstateStatusById', 2) }}"
+                               class="nav-link ">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Approved Estate </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('estates.showEstateStatusById', 3) }}"
+                               class="nav-link ">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Cancel Estate </p>
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a href="{{ route('estates.showEstateStatusById', 4) }}"
+                               class="nav-link ">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Done Estate </p>
                             </a>
                         </li>
                     </ul>
@@ -134,25 +159,6 @@
                                class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Income List</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item has-treeview ">
-                    <a href="#"
-                       class="nav-link">
-                        <i class="nav-icon fas fa-user"></i>
-                        <p>
-                            Manage Images
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#"
-                               class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Images List</p>
                             </a>
                         </li>
                     </ul>
