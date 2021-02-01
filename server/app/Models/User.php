@@ -24,4 +24,12 @@ class User extends Authenticatable
     public function cities() {
         return $this->hasMany(City::class,'user_id');
     }
+
+    public function checkRole() {
+        return $this->role->id == \App\Models\RoleConstants::ROLE_ADMIN ? "badge-success" : "badge-info";
+    }
+
+    function getNameImage(){
+        return '/storage/images/' .ltrim($this->image, '/public/images/');
+    }
 }

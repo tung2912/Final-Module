@@ -26,30 +26,38 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="inputName">Email</label>
-                                <input type="text" name="email" id="inputName" placeholder="Input email"
+                                <label for="inputEmail">Email</label>
+                                <input type="text" name="email" id="inputEmail" placeholder="Input email"
                                        class="form-control @error('email') is-invalid @enderror">
                                 @error('email')
                                 <div style="color: red">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="inputStatus">Role</label>
-{{--                                <select name="role_id" class="form-control custom-select">--}}
-{{--                                    @foreach($roles as $key => $role)--}}
-{{--                                        <option--}}
-{{--                                            value="{{$role->id}}">{{$role->name}}</option>--}}
-{{--                                    @endforeach--}}
-{{--                                </select>--}}
+                                <label for="inputRole">Role</label>
+                                <select name="role_id" class="form-control custom-select">
+                                    @foreach($roles as $key => $role)
+                                        <option
+                                            value="{{$role->id}}">{{$role->name}}</option>
+                                    @endforeach
+                                </select>
                                 @error('role_id')
                                 <div style="color: red">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="inputName">Password</label>
-                                <input type="password" name="password" id="inputName" placeholder="Input password"
+                                <label for="inputPassword">Password</label>
+                                <input type="password" name="password" id="inputPassword" placeholder="Input password"
                                        class="form-control @error('password') is-invalid @enderror">
                                 @error('password')
+                                <div style="color: red">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="inputImage">Image</label>
+                                <input type="file" accept=".png, .jpg, .jpeg" name="image" id="inputImage"
+                                       class="form-control @error('image') is-invalid @enderror">
+                                @error('image')
                                 <div style="color: red">{{ $message }}</div>
                                 @enderror
                             </div>

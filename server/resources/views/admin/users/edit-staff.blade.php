@@ -1,5 +1,5 @@
 @extends('admin.layout.master')
-@section('page-title','Edit User Profile')
+@section('page-title','Edit Staff Profile')
 @section('content')
 
     <!-- Main content -->
@@ -24,23 +24,15 @@
                                 <div style="color: red">{{ $message }}</div>
                                 @enderror
                             </div>
-                            @if(\Illuminate\Support\Facades\Auth::user()->role_id == \App\Models\RoleConstants::ROLE_ADMIN)
-                                <div class="form-group">
-                                    <label for="inputRole">Role</label>
-                                    <select name="role_id" class="form-control custom-select">
-                                        @foreach($roles as $key => $role)
-                                            <option
-                                                @if($role->id == $user->role_id)
-                                                selected
-                                                @endif
-                                                value="{{$role->id}}">{{$role->name}}</option>
-                                        @endforeach
-                                    </select>
-                                    @error('title')
-                                    <div style="color: red">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                            @endif
+                            <div class="form-group">
+                                <label for="inputImage">Image</label>
+                                <input type="file" accept=".png, .jpg, .jpeg" name="image" id="inputImage"
+                                       class="form-control @error('image') is-invalid @enderror">
+                                <img style="width: 100px" src="{{$user->getNameImage()}}" alt="">
+                                @error('image')
+                                <div style="color: red">{{ $message }}</div>
+                                @enderror
+                            </div>
 
                             <div class="form-group">
                                 <input type="submit" value="Update" class="btn btn-success">
