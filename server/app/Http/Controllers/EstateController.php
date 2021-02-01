@@ -48,4 +48,12 @@ class EstateController extends Controller
 
         return redirect()->route('estates.index');
     }
+
+    public function showEstateStatusById($id) {
+
+        $estates = Estate::where('status', $id)->get();
+
+        return view('admin.estates.list', compact('estates'));
+
+    }
 }
