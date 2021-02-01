@@ -195,6 +195,32 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item has-treeview ">
+                    <a href="#"
+                       class="nav-link">
+                        <i class="nav-icon fas fa-user"></i>
+                        <p>
+                            Manage Blogs
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('blogs.index')}}"
+                               class="nav-link ">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Blogs List</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('blogs.create')}}"
+                               class="nav-link ">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add Blog</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="nav-item mt-5">
                     <a href="{{route('admin.logout')}}" class="nav-link">
                         <i class="nav-icon fas fa-arrow-circle-left"></i>
