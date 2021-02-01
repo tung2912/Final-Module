@@ -15,4 +15,11 @@ class Blog extends Model
         'image1',
         'image2'
     ];
+
+    function getNameImage1(){
+        return '/storage/images/' .ltrim($this->image1, '/public/images/');
+    }
+    function getNameImage2(){
+        return '/storage/images/' .ltrim($this->image2, '/public/images/');
+    }
 }
