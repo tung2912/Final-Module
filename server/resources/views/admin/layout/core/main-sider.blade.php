@@ -103,7 +103,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#"
+                            <a href="{{ route('estates.index') }}"
                                class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Estates List</p>
@@ -134,25 +134,6 @@
                                class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Income List</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item has-treeview ">
-                    <a href="#"
-                       class="nav-link">
-                        <i class="nav-icon fas fa-user"></i>
-                        <p>
-                            Manage Images
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#"
-                               class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Images List</p>
                             </a>
                         </li>
                     </ul>
