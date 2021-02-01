@@ -38,6 +38,8 @@
     <link rel="stylesheet" href="plugins/toastr/toastr.css">
     <link rel="stylesheet" href="{{asset('admin_resource/css/mycss.css')}}">
 
+{{--    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">--}}
+
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -127,6 +129,11 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
 
+<script>
+    $(document).ready( function () {
+        $('#example1').DataTable();
+    } );
+</script>
 
 @yield('js')
 </body>

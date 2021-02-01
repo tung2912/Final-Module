@@ -32,7 +32,7 @@
                                     @forelse($cities as $key => $city)
                                         <td>{{++$key}}</td>
                                         <td>{{$city->name}}</td>
-                                        <td>{{$city->user_id}}</td>
+                                        <td>{{ $city->user->name }}</td>
                                         <td>
                                             <div>
                                                 <a data-placement="top"

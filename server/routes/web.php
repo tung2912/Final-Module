@@ -4,10 +4,13 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 
+use App\Http\Controllers\SubscribeController;
 use App\Http\Controllers\UserController;
 
 
 use App\Http\Controllers\CityController;
+
+use App\Http\Controllers\EstateController;
 
 
 use Illuminate\Support\Facades\Route;
@@ -22,13 +25,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-
-
-
-
-
 
 
 Route::get('/login',[LoginController::class,'showLogin'])->name('login');
@@ -72,12 +68,29 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::get('/delete/{blog_id}', [BlogController::class, 'delete'])->name('blogs.delete');
         Route::get('/details/{user_id}', [BlogController::class, 'details'])->name('blogs.details');
     });
+
+    Route::prefix('estates')->group(function () {
+        Route::get('/', [EstateController::class, 'index'])->name('estates.index');
+        Route::get('detail/{id}', [EstateController::class, 'getEstateById'])->name('estates.detail');
+        Route::post('changeStatus/{status_id}/', [EstateController::class, 'changeEstateStatus'])->name('estates.changeStatus');
+        Route::get('EstateStatus/{status_id}/', [EstateController::class, 'showEstateStatusById'])->name('estates.showEstateStatusById');
+    });
+
+    Route::prefix('subscribes')->group(function (){
+        Route::get('/',[SubscribeController::class,'index'])->name('subscribes.index');
+        Route::get('details/{id}',[SubscribeController::class,'getSubscribeById'])->name('subscribes.detail');
+        Route::post('changeStatus/{status_id}/', [SubscribeController::class, 'changeStatus'])->name('estates.changeStatus');
+        Route::get('SubscribeStatus/{status_id}/', [SubscribeController::class, 'show'])->name('estates.showSubscribeStatusById');
+    });
 });
 
 
 
-//Route::get('{any}', function () {
-//    return view('client');
-//})->where('any','.*');
+
+
+
+Route::get('{any}', function () {
+    return view('client');
+})->where('any','.*');
 
 
