@@ -15,7 +15,6 @@ class CreateEstatesTable extends Migration
     {
         Schema::create('estates', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('client_id')->nullable();
             $table->unsignedBigInteger('city_id')->nullable();
             $table->string('address');
             $table->decimal('price',10,2);
@@ -26,7 +25,6 @@ class CreateEstatesTable extends Migration
             $table->longText('description')->nullable();
             $table->integer('status')->default(1);
 
-            $table->foreign('client_id')->references('id')->on('clients');
             $table->foreign('city_id')->references('id')->on('cities');
             $table->timestamps();
         });

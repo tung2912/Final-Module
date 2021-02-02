@@ -20,7 +20,7 @@ class CreateSubscribesTable extends Migration
             $table->unsignedBigInteger('user_id')->nullable();//ko can reference, dung hasmanythrough de truy van
             $table->integer('status')->default(1);
 
-            $table->foreign('client_id')->references('id')->on('clients');
+            $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
             $table->foreign('estate_id')->references('id')->on('estates');
             $table->timestamps();
         });
