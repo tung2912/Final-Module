@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             CitySeeder::class,
             ClientSeeder::class,
+            OwnerSeeder::class,
             EstateSeeder::class
         ]);
 
