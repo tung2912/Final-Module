@@ -12,29 +12,17 @@ class EstateController extends Controller
     public function index() {
         $estates = Estate::all();
 
-        $client = Client::all();
 
-        $city = City::all();
-
-        return view('admin.estates.list', compact('estates', 'city', 'client'));
+        return view('admin.estates.list', compact('estates'));
 
     }
 
-    function uploadImage($obj, $request) {
-        if($request->hasfile('image')) {
-            $pathImage = $request->file('image')->store('public/images');
-            $obj->image = $pathImage;
-        }
-    }
 
     public function getEstateById($id) {
         $estate = Estate::findOrFail($id);
 
-        $client = Client::all();
 
-        $city = City::all();
-
-        return view('admin.estates.detail', compact('estate', 'city', 'client'));
+        return view('admin.estates.detail', compact('estate'));
     }
 
 
@@ -48,9 +36,9 @@ class EstateController extends Controller
         return redirect()->route('estates.index');
     }
 
-    public function showEstateStatusById($id) {
+    public function classifyEstateByStatus($status) {
 
-        $estates = Estate::where('status', $id)->get();
+        $estates = Estate::where('status', $status)->get();
 
         return view('admin.estates.list', compact('estates'));
 

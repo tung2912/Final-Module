@@ -83,6 +83,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::get('/detail/{id}', [EstateController::class, 'getEstateById'])->name('estates.detail');
         Route::post('/changeStatus/{status_id}/', [EstateController::class, 'changeEstateStatus'])->name('estates.changeStatus');
         Route::get('/EstateStatus/{status_id}/', [EstateController::class, 'showEstateStatusById'])->name('estates.showEstateStatusById');
+        Route::get('/EstateStatus/{status_id}/', [EstateController::class, 'classifyEstateByStatus'])->name('estates.classifyEstateByStatus');
     });
 
 
@@ -97,6 +98,8 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::get('/details/{id}',[SubscribeController::class,'getSubscribeById'])->name('subscribes.detail');
         Route::post('/changeStatus/{status_id}/', [SubscribeController::class, 'changeStatus'])->name('subscribes.changeStatus');
         Route::get('/SubscribeStatus/{status_id}/', [SubscribeController::class, 'show'])->name('subscribes.showSubscribeStatusById');
+        Route::post('/changeStatus/{status}/', [SubscribeController::class, 'changeStatus'])->name('subscribes.changeStatus');
+        Route::get('/SubscribeStatus/{status}/', [SubscribeController::class, 'classifySubscribeByStatus'])->name('subscribes.classifySubscribeByStatus');
     });
 });
 
