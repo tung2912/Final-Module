@@ -15,7 +15,7 @@ class EstateSeeder extends Seeder
     public function run()
     {
         $estate = new Estate();
-        $estate->client_id = 1;
+        $estate->owner_id = 1;
         $estate->city_id = 1;
         $estate->address = '303 E 57th St APT 32B';
         $estate->price = 445000 ;

@@ -20,8 +20,6 @@ class ClientSeeder extends Seeder
         $client->email = 'A@gmail.com';
         $client->phone = '123456789';
         $client->address = 'New York City';
-        $client->isRegistered = true;
-        $client->password = Hash::make('123456');
         $client->save();
     }
 }
