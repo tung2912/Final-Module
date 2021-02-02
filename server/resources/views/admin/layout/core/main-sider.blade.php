@@ -193,10 +193,18 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#"
+                            <a href=""
                                class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Clients List</p>
+                                <p>Subscribed Clients</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href=""
+                               class="nav-link ">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Owners</p>
                             </a>
                         </li>
                     </ul>

@@ -34,6 +34,10 @@ class Estate extends Model
         return $this->belongsTo(Client::class,'client_id');
     }
 
+    public function subscribes() {
+        return $this->hasMany(Subscribe::class, 'estate_id', );
+    }
+
     public function getStatus() {
         if($this->status == 1) {
             return "WAITING";
