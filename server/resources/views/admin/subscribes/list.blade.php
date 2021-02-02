@@ -18,7 +18,7 @@
                                 <tr>
                                     <th>No.</th>
                                     <th>Subscriber</th>
-                                    <th>Estate Address</th>
+                                    <th>Estate Information</th>
                                     <th>User manage</th>
                                     <th>Status</th>
                                     <th>Action</th>
@@ -33,13 +33,12 @@
                                             <button value="{{$subscribe->estate->id}}" class="btn btn-success details">Show Information</button>
                                             <div style="display: none" class="detailHTML{{$subscribe->estate->id}}">
                                                 <h3>Owner: {{$subscribe->estate->owner->name}}</h3>
-                                                <h3>City: {{$subscribe->estate->city->name}}</h3>
-                                                <h3>Address: {{$subscribe->estate->address}}</h3>
-                                                <h3>Price: {{$subscribe->estate->price}}</h3>
-                                                <h3>Floor space: {{$subscribe->estate->floor_space}}</h3>
-                                                <h3>Bed rooms: {{$subscribe->estate->bedroom_nums}}</h3>
-                                                <h3>Bath rooms: {{$subscribe->estate->bathroom_nums}}</h3>
-                                                <h3>Garage: {{$subscribe->estate->garage_nums}}</h3>
+                                                <p><span class="es-icon"><i class="fas fa-map-pin"></i></span> {{$subscribe->estate->address}}, {{$subscribe->estate->city->name}}</p>
+                                                <p><span class="es-icon"><i class="fas fa-dollar-sign"></i></span>{{$subscribe->estate->price}}</p>
+                                                <p><span class="es-icon"><i class="fas fa-th-large"></i></span> {{$subscribe->estate->floor_space}} sqft</p>
+                                                <p><span class="es-icon"><i class="fas fa-bed"></i></span>{{$subscribe->estate->bedroom_nums}} Beds</p>
+                                                <p><span class="es-icon"><i class="fas fa-bath"></i></span>{{$subscribe->estate->bathroom_nums}} Baths</p>
+                                                <p><span class="es-icon"><i class="fas fa-car"></i></span>{{$subscribe->estate->garage_nums}} Garage</p>
 
                                                 <h2>Description</h2>
                                                 <div class="mt-1 border-top-1">
@@ -57,7 +56,7 @@
                                             <div>
                                                 <a data-placement="top"
                                                    href="{{route('subscribes.detail', $subscribe->id)}}" class="mr-3">
-                                                    <i class="nav-icon fas fa-edit"></i>Detail
+                                                    <i class="nav-icon fas fa-eye"></i>
                                                 </a>
 
                                             </div>
@@ -96,8 +95,8 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+                <h5 class="modal-title" id="exampleModalLabel">Estate information</h5>
+                <button type="button" style="border: none; font-weight: bold" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
             </div>
             <div class="modal-body">
                 ...
