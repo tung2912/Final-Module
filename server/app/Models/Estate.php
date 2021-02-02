@@ -30,16 +30,13 @@ class Estate extends Model
         return $this->hasMany(Image::class,'estate_id');
     }
 
-    public function client() {
-        return $this->belongsTo(Client::class,'client_id');
+    public function owner() {
+        return $this->belongsTo(Owner::class,'owner_id');
     }
     public function subscribes() {
         return $this->hasMany(Subscribe::class,'estate_id');
     }
 
-    public function subscribes() {
-        return $this->hasMany(Subscribe::class, 'estate_id', );
-    }
 
     public function getStatus() {
         if($this->status == 1) {
