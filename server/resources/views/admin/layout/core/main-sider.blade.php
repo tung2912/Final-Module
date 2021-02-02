@@ -110,7 +110,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href=" {{ route('estates.showEstateStatusById', 1) }}"
+                            <a href=" {{ route('estates.classifyEstateByStatus', 1) }}"
                                class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Waiting Estate </p>
@@ -118,7 +118,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ route('estates.showEstateStatusById', 2) }}"
+                            <a href="{{ route('estates.classifyEstateByStatus', 2) }}"
                                class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Approved Estate </p>
@@ -126,7 +126,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ route('estates.showEstateStatusById', 3) }}"
+                            <a href="{{ route('estates.classifyEstateByStatus', 3) }}"
                                class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Cancel Estate </p>
@@ -135,7 +135,7 @@
 
 
                         <li class="nav-item">
-                            <a href="{{ route('estates.showEstateStatusById', 4) }}"
+                            <a href="{{ route('estates.classifyEstateByStatus', 4) }}"
                                class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Done Estate </p>
@@ -178,6 +178,39 @@
                                class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Subscribes List</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href=" {{ route('subscribes.classifySubscribeByStatus', 1) }}"
+                               class="nav-link ">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Waiting Subscribe </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('subscribes.classifySubscribeByStatus', 2) }}"
+                               class="nav-link ">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>In processing Subscribe </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('subscribes.classifySubscribeByStatus', 3) }}"
+                               class="nav-link ">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Cancel Subscribe </p>
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a href="{{ route('subscribes.classifySubscribeByStatus', 4) }}"
+                               class="nav-link ">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Done Subscribe </p>
                             </a>
                         </li>
                     </ul>

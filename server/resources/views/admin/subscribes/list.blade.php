@@ -28,7 +28,7 @@
                                 <tr>
                                     @forelse($subscribes as $key => $subscribe)
                                         <td>{{++$key}}</td>
-                                        <td>{{$subscribe->getSubScriber()}}</td>
+                                        <td>{{$subscribe->getSubScriber()->name}}</td>
                                         <td>
                                             <button value="{{$subscribe->estate->id}}" class="btn btn-success details">Show Information</button>
                                             <div style="display: none" class="detailHTML{{$subscribe->estate->id}}">
@@ -56,7 +56,7 @@
                                         <td>
                                             <div>
                                                 <a data-placement="top"
-                                                   href="#" class="mr-3">
+                                                   href="{{route('subscribes.detail', $subscribe->id)}}" class="mr-3">
                                                     <i class="nav-icon fas fa-edit"></i>Detail
                                                 </a>
 
@@ -92,12 +92,12 @@
         <!-- /.container-fluid -->
     </section>
 @endsection
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
             </div>
             <div class="modal-body">
                 ...
@@ -114,7 +114,7 @@
             let id = $(this).val();
             let html = $('.detailHTML'+id).html();
             $('.modal-body').html(html)
-            $('#staticBackdrop').modal('show')
+            $('#exampleModal').modal('show')
         })
     </script>
 @endsection
