@@ -27,4 +27,30 @@ class Subscribe extends Model
     public function income() {
         return $this->hasOne(Income::class,'subscribe_id');
     }
+
+    public function getStatus() {
+        if($this->status == 1) {
+            return "WAITING";
+        }
+        elseif($this->status == 2) {
+            return "IN PROCESSING";
+        }
+        elseif ($this->status == 3) {
+            return "DONE";
+        }
+        else return "SUCCESS";
+    }
+
+    public function getBadge() {
+        if($this->status == 1) {
+            return "badge-danger";
+        }
+        elseif($this->status == 2) {
+            return "badge-info";
+        }
+        elseif ($this->status == 3) {
+            return "badge-warning";
+        }
+        else return "badge-success";
+    }
 }

@@ -4,6 +4,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 
+use App\Http\Controllers\SubscribeController;
 use App\Http\Controllers\UserController;
 
 
@@ -67,13 +68,14 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::get('/delete/{blog_id}', [BlogController::class, 'delete'])->name('blogs.delete');
         Route::get('/details/{user_id}', [BlogController::class, 'details'])->name('blogs.details');
     });
-});
+
 
         Route::get('/edit/{city_id}', [CityController::class, 'edit'])->name('cities.edit');
         Route::post('/edit/{city_id}', [CityController::class, 'update'])->name('cities.update');
         Route::get('/delete/{city_id}', [CityController::class, 'delete'])->name('cities.delete');
 
-    });
+
+
 
     Route::prefix('estates')->group(function () {
         Route::get('/', [EstateController::class, 'index'])->name('estates.index');
@@ -82,10 +84,21 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::get('EstateStatus/{status_id}/', [EstateController::class, 'showEstateStatusById'])->name('estates.showEstateStatusById');
     });
 
+    Route::prefix('subscribes')->group(function (){
+        Route::get('/',[SubscribeController::class,'index'])->name('subscribes.index');
+        Route::get('details/{id}',[SubscribeController::class,'getSubscribeById'])->name('subscribes.detail');
+        Route::post('changeStatus/{status_id}/', [SubscribeController::class, 'changeStatus'])->name('estates.changeStatus');
+        Route::get('SubscribeStatus/{status_id}/', [SubscribeController::class, 'show'])->name('estates.showSubscribeStatusById');
+    });
 });
 
-//Route::get('{any}', function () {
-//    return view('client');
-//})->where('any','.*');
+
+
+
+
+
+Route::get('{any}', function () {
+    return view('client');
+})->where('any','.*');
 
 
