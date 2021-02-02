@@ -11,6 +11,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CityController;
 
 use App\Http\Controllers\EstateController;
+use App\Http\Controllers\ClientController;
 
 
 use Illuminate\Support\Facades\Route;
@@ -82,6 +83,12 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::get('detail/{id}', [EstateController::class, 'getEstateById'])->name('estates.detail');
         Route::post('changeStatus/{status_id}/', [EstateController::class, 'changeEstateStatus'])->name('estates.changeStatus');
         Route::get('EstateStatus/{status_id}/', [EstateController::class, 'showEstateStatusById'])->name('estates.showEstateStatusById');
+    });
+
+
+    Route::prefix('clients')->group(function () {
+//         Route::get('/registered', [ClientController::class, 'registered'])->name('clients.registered');
+//         Route::get('/subscribed', [ClientController::class, 'subscribed'])->name('clients.subscribed');
     });
 
     Route::prefix('subscribes')->group(function (){
