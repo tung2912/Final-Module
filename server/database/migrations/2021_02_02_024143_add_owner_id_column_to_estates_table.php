@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateClientsTable extends Migration
+class AddOwnerIdColumnToEstatesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateClientsTable extends Migration
      */
     public function up()
     {
-        Schema::create('clients', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email');
-            $table->string('address');
-            $table->string('phone');
-            $table->timestamps();
+        Schema::table('estates', function (Blueprint $table) {
+            $table->unsignedBigInteger('owner_id')->nullable()->after('id');
+
+            $table->foreign('owner_id')->references('id')->on('owners');
         });
     }
 
@@ -30,6 +27,8 @@ class CreateClientsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clients');
+        Schema::table('estates', function (Blueprint $table) {
+            //
+        });
     }
 }

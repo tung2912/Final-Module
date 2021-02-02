@@ -23,6 +23,6 @@ class Client extends Model
     }
 
     public function subscribes () {
-        return $this->hasMany(Subscribe::class,'client-id');
+        return $this->hasMany(Subscribe::class,'client_id');
     }
 }
