@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Owner extends Model
 {
-    use HasFactory;
+    public function estates() {
+        return $this->hasMany(Estate::class,'owner_id');
+    }
+
+    public function subscribes() {
+        return $this->hasMany(Subscribe::class,'owner_id');
+    }
 }

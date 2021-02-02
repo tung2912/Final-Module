@@ -18,11 +18,8 @@ class Client extends Model
         'isRegistered'
     ];
 
-    public function estates() {
-        return $this->hasMany(Estate::class,'client_id');
-    }
 
     public function subscribes () {
-        return $this->hasMany(Subscribe::class,'client_id');
+        return $this->hasOne(Subscribe::class,'client_id');
     }
 }
