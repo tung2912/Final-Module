@@ -57,4 +57,13 @@ class Subscribe extends Model
         }
         else return "badge-success";
     }
+
+    public function getSubScriber() {
+        if(isset($this->client)) {
+            return $this->client->name;
+        }
+        elseif (isset($this->owner)) {
+            return $this->owner->name;
+        }
+    }
 }

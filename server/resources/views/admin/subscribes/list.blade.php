@@ -17,7 +17,7 @@
                                 <thead>
                                 <tr>
                                     <th>No.</th>
-                                    <th>Client name</th>
+                                    <th>Subscriber</th>
                                     <th>Estate Address</th>
                                     <th>User manage</th>
                                     <th>Status</th>
@@ -28,13 +28,13 @@
                                 <tr>
                                     @forelse($subscribes as $key => $subscribe)
                                         <td>{{++$key}}</td>
-                                        <td>{{$subscribe->client->name}}</td>
+                                        <td>{{$subscribe->getSubScriber()}}</td>
                                         <td>
                                             <button value="{{$subscribe->estate->id}}" class="btn btn-success details">Show Information</button>
                                             <div style="display: none" class="detailHTML{{$subscribe->estate->id}}">
-                                                <h3>Owner: {{$subscribe->client->name}}</h3>
+                                                <h3>Owner: {{$subscribe->estate->owner->name}}</h3>
                                                 <h3>City: {{$subscribe->estate->city->name}}</h3>
-                                                <h3>Address: {{$subscribe->estate->adress}}</h3>
+                                                <h3>Address: {{$subscribe->estate->address}}</h3>
                                                 <h3>Price: {{$subscribe->estate->price}}</h3>
                                                 <h3>Floor space: {{$subscribe->estate->floor_space}}</h3>
                                                 <h3>Bed rooms: {{$subscribe->estate->bedroom_nums}}</h3>
