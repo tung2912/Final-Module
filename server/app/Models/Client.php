@@ -19,7 +19,7 @@ class Client extends Model
     ];
 
 
-    public function subscribes () {
+    public function subscribe () {
         return $this->hasOne(Subscribe::class,'client_id');
     }
 }

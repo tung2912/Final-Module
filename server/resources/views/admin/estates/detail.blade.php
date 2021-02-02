@@ -13,10 +13,10 @@
             <div class="col-lg-4 col-md-12 col-sm-12 estate-owner">
                 <h5>CLient</h5>
                 <hr>
-                <p><span><i class="far fa-user"></i></span> {{$estate->client->name}}</p>
-                <p><span><i class="far fa-envelope"></i></span> {{$estate->client->email}}</p>
-                <p><span><i class="fas fa-home"></i></span> {{$estate->client->address}}</p>
-                <p><span><i class="fas fa-phone"></i></span> {{$estate->client->phone}}</p>
+                <p><span><i class="far fa-user"></i></span> {{$estate->owner->name}}</p>
+                <p><span><i class="far fa-envelope"></i></span> {{$estate->owner->email}}</p>
+                <p><span><i class="fas fa-home"></i></span> {{$estate->owner->address}}</p>
+                <p><span><i class="fas fa-phone"></i></span> {{$estate->owner->phone}}</p>
 
             </div>
 

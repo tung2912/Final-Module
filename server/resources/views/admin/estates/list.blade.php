@@ -22,7 +22,7 @@
                                     <th>No.</th>
                                     <th>City</th>
                                     <th>Price</th>
-                                    <th>Client Name</th>
+                                    <th>Owner Name</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
@@ -33,7 +33,7 @@
                                         <td>{{++$key}}</td>
                                         <td>{{$estate->city->name}}</td>
                                         <td>$ {{$estate->price}}</td>
-                                        <td>{{$estate->client->name}}</td>
+                                        <td>{{$estate->owner->name}}</td>
                                         <td>
 
                                         <span  class="badge {{$estate->getBadge()}}" style="padding: 7px; letter-spacing: 1.5px">{{$estate->getStatus()}}</span>
@@ -60,7 +60,7 @@
                                     <th>No.</th>
                                     <th>City</th>
                                     <th>Price</th>
-                                    <th>Client Name</th>
+                                    <th>Owner Name</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
