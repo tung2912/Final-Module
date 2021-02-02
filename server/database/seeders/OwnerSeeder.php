@@ -22,5 +22,13 @@ class OwnerSeeder extends Seeder
         $owner->address = 'Hue City';
         $owner->password = Hash::make('123456');
         $owner->save();
+
+        $owner = new Owner();
+        $owner->name = 'Quang';
+        $owner->email = 'quang@gmail.com';
+        $owner->phone = '0987654312';
+        $owner->address = 'Hue City';
+        $owner->password = Hash::make('123456');
+        $owner->save();
     }
 }

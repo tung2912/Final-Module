@@ -226,7 +226,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href=""
+                            <a href="{{ route('clients.subscribers') }}"
                                class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Subscribed Clients</p>
@@ -234,7 +234,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href=""
+                            <a href="{{ route('clients.owners') }}"
                                class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Owners</p>

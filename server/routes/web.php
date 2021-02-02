@@ -82,18 +82,22 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::get('/', [EstateController::class, 'index'])->name('estates.index');
         Route::get('/detail/{id}', [EstateController::class, 'getEstateById'])->name('estates.detail');
         Route::post('/changeStatus/{status_id}/', [EstateController::class, 'changeEstateStatus'])->name('estates.changeStatus');
+        Route::get('/EstateStatus/{status_id}/', [EstateController::class, 'showEstateStatusById'])->name('estates.showEstateStatusById');
         Route::get('/EstateStatus/{status_id}/', [EstateController::class, 'classifyEstateByStatus'])->name('estates.classifyEstateByStatus');
     });
 
 
     Route::prefix('clients')->group(function () {
-//         Route::get('/registered', [ClientController::class, 'registered'])->name('clients.registered');
-//         Route::get('/subscribed', [ClientController::class, 'subscribed'])->name('clients.subscribed');
+         Route::get('/owners', [ClientController::class, 'getOwners'])->name('clients.owners');
+         Route::get('/subscribers', [ClientController::class, 'getSubscribers'])->name('clients.subscribers');
+         Route::get('/deleteSubscriber/{subscriber_id}', [ClientController::class, 'deleteSubscriber'])->name('clients.deleteSubscriber');
     });
 
     Route::prefix('subscribes')->group(function (){
         Route::get('/',[SubscribeController::class,'index'])->name('subscribes.index');
         Route::get('/details/{id}',[SubscribeController::class,'getSubscribeById'])->name('subscribes.detail');
+        Route::post('/changeStatus/{status_id}/', [SubscribeController::class, 'changeStatus'])->name('subscribes.changeStatus');
+        Route::get('/SubscribeStatus/{status_id}/', [SubscribeController::class, 'show'])->name('subscribes.showSubscribeStatusById');
         Route::post('/changeStatus/{status}/', [SubscribeController::class, 'changeStatus'])->name('subscribes.changeStatus');
         Route::get('/SubscribeStatus/{status}/', [SubscribeController::class, 'classifySubscribeByStatus'])->name('subscribes.classifySubscribeByStatus');
     });

@@ -22,7 +22,7 @@
                                     <th>No.</th>
                                     <th>City</th>
                                     <th>Price</th>
-                                    <th>Client Name</th>
+                                    <th>Owner Name</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
@@ -60,7 +60,7 @@
                                     <th>No.</th>
                                     <th>City</th>
                                     <th>Price</th>
-                                    <th>Client Name</th>
+                                    <th>Owner Name</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
