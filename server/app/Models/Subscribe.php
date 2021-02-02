@@ -60,10 +60,10 @@ class Subscribe extends Model
 
     public function getSubScriber() {
         if(isset($this->client)) {
-            return $this->client->name;
+            return $this->client;
         }
         elseif (isset($this->owner)) {
-            return $this->owner->name;
+            return $this->owner;
         }
     }
 }
