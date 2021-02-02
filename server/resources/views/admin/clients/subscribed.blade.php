@@ -66,7 +66,7 @@
 
                                                 <a class="text-danger"
                                                    onclick="return confirm('Are you sure you want to delete')"
-                                                   href="{{ route('clients.deleteSubscriber', $client->id) }}">
+                                                   href="">
                                                     <i class="nav-icon far fa-trash-alt"></i>Delete</a>
                                             </div>
                                         </td>

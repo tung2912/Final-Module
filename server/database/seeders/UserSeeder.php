@@ -24,6 +24,13 @@ class UserSeeder extends Seeder
         $user->save();
 
         $user = new User();
+        $user->name = "tran1";
+        $user->email = "tran1@gmail.com";
+        $user->password = Hash::make('123456');
+        $user->role_id = RoleConstants::ROLE_ADMIN;
+        $user->save();
+
+        $user = new User();
         $user->name = "tran";
         $user->email = "tran@gmail.com";
         $user->password = Hash::make('123456');
