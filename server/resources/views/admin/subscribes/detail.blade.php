@@ -11,7 +11,7 @@
 
         <div class="row">
             <div class="col-lg-4 col-md-12 col-sm-12 estate-owner">
-                <h5>Subscriber</h5>
+                <h5 class="mt-2">Subscriber</h5>
                 <hr>
                 <p><span><i class="far fa-user"></i></span> {{$subscribe->getSubScriber()->name}}</p>
                 <p><span><i class="far fa-envelope"></i></span> {{$subscribe->getSubScriber()->email}}</p>
@@ -21,7 +21,7 @@
             </div>
 
             <div class="col-lg-7 col-md-12 col-sm-12 estate-detail">
-                <h5>Estate Detail</h5>
+                <h5 class="mt-2">Estate Detail</h5>
                 <hr>
                 <div class="row">
                     <div class="col-5">

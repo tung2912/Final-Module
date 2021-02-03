@@ -1,9 +1,9 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="" class="brand-link">
-        <img src="{{ asset('admin_resource/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+        <img src="{{ asset('admin_resource/dist/img/homeLogoWhite.png') }}" alt="AdminLTE Logo" class="brand-image img-rounded elevation-6"
              style="opacity: .8">
-        <span class="brand-text font-weight-light">Home Dashboard</span>
+        <span class="brand-text font-weight-bolder" id="textLogo"> Dashboard</span>
     </a>
     <!-- Sidebar -->
     <div class="sidebar">
@@ -51,14 +51,14 @@
                             <li class="nav-item">
                                 <a href="{{route('users.index')}}"
                                    class="nav-link ">
-                                    <i class="far fa-circle nav-icon"></i>
+                                    <i class="nav-icon fas fa-list"></i>
                                     <p>Users List</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{route('users.create')}}"
                                    class="nav-link ">
-                                    <i class="far fa-circle nav-icon"></i>
+                                    <i class="nav-icon fas fa-list"></i>
                                     <p>Add User</p>
                                 </a>
                             </li>
@@ -69,7 +69,7 @@
                 <li class="nav-item has-treeview">
                     <a href="#"
                        class="nav-link ">
-                        <i class="nav-icon fas fa-layer-group"></i>
+                        <i class="nav-icon fas fa-road"></i>
                         <p>
                             Manage Cities
                             <i class="fas fa-angle-left right"></i>
@@ -79,14 +79,14 @@
                         <li class="nav-item">
                             <a href="{{ route('cities.index') }}"
                                class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="nav-icon fas fa-list"></i>
                                 <p>Cities List</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('cities.create') }}"
                                class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="nav-icon fas fa-list"></i>
                                 <p>Add City </p>
                             </a>
                         </li>
@@ -95,7 +95,7 @@
                 <li class="nav-item has-treeview">
                     <a href="#"
                        class="nav-link ">
-                        <i class="nav-icon fas fa-layer-group"></i>
+                        <i class="nav-icon fas fa-home"></i>
                         <p>
                             Manage Estates
                             <i class="fas fa-angle-left right"></i>
@@ -105,14 +105,14 @@
                         <li class="nav-item">
                             <a href="{{ route('estates.index') }}"
                                class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="nav-icon fas fa-list"></i>
                                 <p>Estates List</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href=" {{ route('estates.classifyEstateByStatus', 1) }}"
                                class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="nav-icon fas fa-list"></i>
                                 <p>Waiting Estate </p>
                             </a>
                         </li>
@@ -120,7 +120,7 @@
                         <li class="nav-item">
                             <a href="{{ route('estates.classifyEstateByStatus', 2) }}"
                                class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="nav-icon fas fa-list"></i>
                                 <p>Approved Estate </p>
                             </a>
                         </li>
@@ -128,7 +128,7 @@
                         <li class="nav-item">
                             <a href="{{ route('estates.classifyEstateByStatus', 3) }}"
                                class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="nav-icon fas fa-list"></i>
                                 <p>Cancel Estate </p>
                             </a>
                         </li>
@@ -137,7 +137,7 @@
                         <li class="nav-item">
                             <a href="{{ route('estates.classifyEstateByStatus', 4) }}"
                                class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="nav-icon fas fa-list"></i>
                                 <p>Done Estate </p>
                             </a>
                         </li>
@@ -147,7 +147,7 @@
                 <li class="nav-item has-treeview ">
                     <a href="#"
                        class="nav-link">
-                        <i class="nav-icon fas fa-layer-group"></i>
+                        <i class="nav-icon fas fa-dollar-sign"></i>
                         <p>
                             Manage Incomes
                             <i class="right fas fa-angle-left"></i>
@@ -157,7 +157,7 @@
                         <li class="nav-item">
                             <a href="#"
                                class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="nav-icon fas fa-list"></i>
                                 <p>Income List</p>
                             </a>
                         </li>
@@ -166,7 +166,7 @@
                 <li class="nav-item has-treeview ">
                     <a href="#"
                        class="nav-link">
-                        <i class="nav-icon fas fa-user"></i>
+                        <i class="nav-icon fas fa-check"></i>
                         <p>
                             Manage Subscribes
                             <i class="right fas fa-angle-left"></i>
@@ -176,7 +176,7 @@
                         <li class="nav-item">
                             <a href="{{route('subscribes.index')}}"
                                class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="nav-icon fas fa-list"></i>
                                 <p>Subscribes List</p>
                             </a>
                         </li>
@@ -184,7 +184,7 @@
                         <li class="nav-item">
                             <a href=" {{ route('subscribes.classifySubscribeByStatus', 1) }}"
                                class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="nav-icon fas fa-list"></i>
                                 <p>Waiting Subscribe </p>
                             </a>
                         </li>
@@ -192,7 +192,7 @@
                         <li class="nav-item">
                             <a href="{{ route('subscribes.classifySubscribeByStatus', 2) }}"
                                class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="nav-icon fas fa-list"></i>
                                 <p>In processing Subscribe </p>
                             </a>
                         </li>
@@ -200,7 +200,7 @@
                         <li class="nav-item">
                             <a href="{{ route('subscribes.classifySubscribeByStatus', 3) }}"
                                class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="nav-icon fas fa-list"></i>
                                 <p>Cancel Subscribe </p>
                             </a>
                         </li>
@@ -209,7 +209,7 @@
                         <li class="nav-item">
                             <a href="{{ route('subscribes.classifySubscribeByStatus', 4) }}"
                                class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="nav-icon fas fa-list"></i>
                                 <p>Done Subscribe </p>
                             </a>
                         </li>
@@ -228,7 +228,7 @@
                         <li class="nav-item">
                             <a href="{{ route('clients.subscribers') }}"
                                class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="nav-icon fas fa-list"></i>
                                 <p>Subscribed Clients</p>
                             </a>
                         </li>
@@ -236,7 +236,7 @@
                         <li class="nav-item">
                             <a href="{{ route('clients.owners') }}"
                                class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="nav-icon fas fa-list"></i>
                                 <p>Owners</p>
                             </a>
                         </li>
@@ -245,7 +245,7 @@
                 <li class="nav-item has-treeview ">
                     <a href="#"
                        class="nav-link">
-                        <i class="nav-icon fas fa-user"></i>
+                        <i class="nav-icon fas fa-newspaper"></i>
                         <p>
                             Manage Blogs
                             <i class="right fas fa-angle-left"></i>
@@ -255,14 +255,14 @@
                         <li class="nav-item">
                             <a href="{{route('blogs.index')}}"
                                class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="nav-icon fas fa-list"></i>
                                 <p>Blogs List</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('blogs.create')}}"
                                class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="nav-icon fas fa-list"></i>
                                 <p>Add Blog</p>
                             </a>
                         </li>
