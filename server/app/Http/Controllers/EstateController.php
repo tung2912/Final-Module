@@ -10,7 +10,8 @@ use Illuminate\Http\Request;
 
 class EstateController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $estates = Estate::all();
 
 
@@ -19,7 +20,8 @@ class EstateController extends Controller
     }
 
 
-    public function getEstateById($id) {
+    public function getEstateById($id)
+    {
         $estate = Estate::findOrFail($id);
 
 
@@ -27,7 +29,8 @@ class EstateController extends Controller
     }
 
 
-    public function changeEstateStatus(Request  $request, $id) {
+    public function changeEstateStatus(Request $request, $id)
+    {
         $estate = Estate::findOrFail($id);
 
         $estate->status = $request->input('status');
@@ -37,7 +40,8 @@ class EstateController extends Controller
         return redirect()->route('estates.index');
     }
 
-    public function classifyEstateByStatus($status) {
+    public function classifyEstateByStatus($status)
+    {
 
         $estates = Estate::where('status', $status)->get();
 

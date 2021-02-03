@@ -30,7 +30,7 @@
                                         <td>{{++$key}}</td>
                                         <td>{{$subscribe->getSubScriber()->name}}</td>
                                         <td>
-                                            <button value="{{$subscribe->estate->id}}" class="btn btn-success details">Show Information</button>
+                                            <button style="background-color: #529DDD;color: white" value="{{$subscribe->estate->id}}" class="btn details">Show Info <i class="nav-icon fas fa-eye"></i></button>
                                             <div style="display: none" class="detailHTML{{$subscribe->estate->id}}">
                                                 <h3>Owner: {{$subscribe->estate->owner->name}}</h3>
                                                 <p><span class="es-icon"><i class="fas fa-map-pin"></i></span> {{$subscribe->estate->address}}, {{$subscribe->estate->city->name}}</p>
@@ -44,6 +44,9 @@
                                                 <div class="mt-1 border-top-1">
                                                     {!!$subscribe->estate->description!!}
                                                 </div>
+                                                <div style="letter-spacing: 5px" class="mt-1 badge {{$subscribe->estate->getBadge()}}">
+                                                    {{$subscribe->estate->getStatus()}}
+                                                </div>
                                             </div>
                                         </td>
                                         <td>{{$subscribe->estate->city->user->name}}</td>
@@ -56,7 +59,7 @@
                                             <div>
                                                 <a data-placement="top"
                                                    href="{{route('subscribes.detail', $subscribe->id)}}" class="mr-3">
-                                                    <i class="nav-icon fas fa-eye"></i>
+                                                    <i style="font-size: 1.2rem" class="nav-icon fas fa-eye">Details</i>
                                                 </a>
 
                                             </div>
