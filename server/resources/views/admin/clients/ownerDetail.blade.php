@@ -9,7 +9,7 @@
 
         <div class="row">
             <div class="col-lg-5 col-md-12 col-sm-12 estate-owner">
-                <h5>Subscribed Estates 's </h5>
+                <h5 class="mt-2">Subscribed Estates 's </h5>
                 <hr>
                 <section class="content">
                     <div class="container-fluid">
@@ -85,7 +85,7 @@
             </div>
 
             <div class="col-lg-6 col-md-12 col-sm-12 estate-detail">
-                <h5>Owner's Estates</h5>
+                <h5 class="mt-2">Owner's Estates</h5>
                 <hr>
 
                 <section class="content">
