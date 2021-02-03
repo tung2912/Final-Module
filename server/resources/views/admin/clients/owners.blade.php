@@ -34,7 +34,7 @@
 
                                                 <a class="text-info"
                                                    href="{{ route('clients.ownerDetail', $owner->id) }}">
-                                                    <i class="nav-icon fas fa-edit"></i>Detail</a>
+                                                    <i class="nav-icon fas fa-eye"></i>Detail</a>
                                             </div>
                                         </td>
                                 </tr>

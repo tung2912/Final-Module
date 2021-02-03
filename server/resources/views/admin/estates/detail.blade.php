@@ -24,14 +24,14 @@
                 <h5>Estate Detail</h5>
                 <hr>
                 <div class="row">
-                    <div class="col-5">
+                    <div class="col-7">
                         <p><span><i class="fas fa-th-large"></i></span> {{ $estate->floor_space }} sqft</p>
                         <p><span><i class="fas fa-dollar-sign"></i></span> {{ $estate->price }}</p>
                         <p><span><i class="fas fa-map-pin"></i></span> {{ $estate->address }}, {{ $estate->city->name }}</p>
 
                     </div>
 
-                    <div class="col-5">
+                    <div class="col-3">
                         <p><span><i class="fas fa-bed"></i></span> {{ $estate->bedroom_nums }} Beds</p>
                         <p><span><i class="fas fa-bath"></i></span> {{ $estate->bathroom_nums }} Baths</p>
                         <p><span><i class="fas fa-car"></i></span> {{ $estate->garage_nums }} Garage</p>
