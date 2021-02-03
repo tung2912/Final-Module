@@ -25,22 +25,14 @@
         <!-- Notifications Dropdown Menu -->
         <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
-                <i class="far fa-bell"></i>
-                <span class="badge badge-warning navbar-badge">15</span>
+                <i class="fas fa-cogs"></i>
             </a>
-            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                <span class="dropdown-item dropdown-header">15 Notifications</span>
-                <div class="dropdown-divider"></div>
+            <div class="dropdown-menu dropdown-menu dropdown-menu-right">
                 <a href="{{route('users.profile',\Illuminate\Support\Facades\Auth::user()->id)}}" class="dropdown-item">
-                    <i class="fas fa-users mr-2"></i> Profile
+                    <i class="fas fa-user mr-2"></i> Profile
                 </a>
                 <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">
-                    <i class="fas fa-file mr-2"></i> 3 new reports
-                    <span class="float-right text-muted text-sm">2 days</span>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="{{route('admin.logout')}}" class="dropdown-item dropdown-footer">Logout</a>
+                <a href="{{route('admin.logout')}}" class="dropdown-item"> <i class="nav-icon fas fa-arrow-circle-left mr-2"></i>Logout</a>
             </div>
         </li>
         <li class="nav-item">
