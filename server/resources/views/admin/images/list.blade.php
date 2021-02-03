@@ -30,7 +30,7 @@
                                     @forelse($images as $key => $image)
                                         <td>{{++$key}}</td>
                                         <td>
-                                            <button value="{{$image->estate->id}}" class="btn btn-success details">Show Info</button>
+                                            <button style="background-color: #529DDD;color: white" value="{{$image->estate->id}}" class="btn details">Show Info <i class="nav-icon fas fa-eye"></i></button>
                                             <div style="display: none" class="detailHTML{{$image->estate->id}}">
                                                 <h3>Owner: {{$image->estate->owner->name}}</h3>
                                                 <p><span class="es-icon"><i class="fas fa-map-pin"></i></span> {{$image->estate->address}}, {{$image->estate->city->name}}</p>
@@ -56,7 +56,7 @@
                                             <div>
                                                 <a data-placement="top"
                                                    href="#" class="mr-3">
-                                                    <i class="nav-icon fas fa-eye"></i>
+                                                    <i style="font-size: 1.2rem" class="nav-icon fas fa-eye">Details</i>
                                                 </a>
 
                                             </div>
