@@ -90,6 +90,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
 
     Route::prefix('clients')->group(function () {
          Route::get('/owners', [ClientController::class, 'getOwners'])->name('clients.owners');
+         Route::get('/ownersDetail/{owner_id}', [ClientController::class, 'getOwnerDetail'])->name('clients.ownerDetail');
          Route::get('/subscribers', [ClientController::class, 'getSubscribers'])->name('clients.subscribers');
          Route::get('/deleteSubscriber/{subscriber_id}', [ClientController::class, 'deleteSubscriber'])->name('clients.deleteSubscriber');
     });
