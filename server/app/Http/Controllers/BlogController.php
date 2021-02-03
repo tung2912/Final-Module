@@ -31,7 +31,7 @@ class BlogController extends Controller
     {
         $blog = new Blog();
         $blog->title = $request->title;
-        $blog->content = $request->content;
+        $blog->content = $request->contents;
         $this->uploadImage1($blog, $request);
         $this->uploadImage2($blog, $request);
         $blog->save();

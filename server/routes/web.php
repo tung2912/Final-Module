@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LoginController;
 
 use App\Http\Controllers\SubscribeController;
@@ -101,6 +102,13 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::post('/changeStatus/{status}/', [SubscribeController::class, 'changeStatus'])->name('subscribes.changeStatus');
         Route::get('/SubscribeStatus/{status}/', [SubscribeController::class, 'classifySubscribeByStatus'])->name('subscribes.classifySubscribeByStatus');
     });
+
+    Route::prefix('images')->group(function () {
+        Route::get('/',[ImageController::class,'index'])->name('images.index');
+        Route::get('/create',[ImageController::class,'create'])->name('images.create');
+        Route::post('/create',[ImageController::class,'store'])->name('images.store');
+    });
+
 });
 
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\City;
 use App\Models\Client;
 use App\Models\Estate;
+use App\Models\Income;
 use Illuminate\Http\Request;
 
 class EstateController extends Controller

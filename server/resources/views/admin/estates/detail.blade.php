@@ -47,9 +47,22 @@
                 {{-- show image by model bootstrap--}}
 
             <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#exampleModal">
+                <button value="{{$estate->id}}" type="button" class="btn btn-primary mb-2 details" >
                     <i class="fas fa-image"></i> Show Images
                 </button>
+                <div style="display: none" class="detailHTML{{$estate->id}}">
+                    <div class="row">
+                    @forelse($estate->images as $image)
+                            <div class="col">
+                                <img style="width: 100px" src="{{$image->getNameImage()}}" alt="">
+                            </div>
+                    @empty
+                        <tr>
+                            <td colspan="3">No data</td>
+                        </tr>
+                    @endforelse
+                    </div>
+                </div>
 
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -62,7 +75,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-{{--                                <img src="" alt="">--}}
+
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -91,4 +104,30 @@
 
     </form>
 
+@endsection
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Images List</h5>
+                <button style="border: none; font-weight: bold" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section('js')
+    <script>
+        $('body').on('click','.details',function (){
+            let id = $(this).val();
+            let html = $('.detailHTML'+id).html();
+            $('.modal-body').html(html)
+            $('#staticBackdrop').modal('show')
+        })
+    </script>
 @endsection

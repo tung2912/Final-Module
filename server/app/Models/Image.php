@@ -19,7 +19,7 @@ class Image extends Model
     }
 
     function getNameImage(){
-        return '/storage/images/' .ltrim($this->image, '/public/images/');
+        return '/storage/images/' .ltrim($this->url, '/public/images/');
     }
 
 }

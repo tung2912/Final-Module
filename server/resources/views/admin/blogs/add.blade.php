@@ -27,7 +27,7 @@
                             </div>
                             <div class="form-floating">
                                 <label for="floatingTextarea">Content</label>
-                                <textarea  class="form-control @error('content') is-invalid @enderror" name="content" placeholder="Input Content"
+                                <textarea  class="form-control @error('contents') is-invalid @enderror" name="contents" placeholder="Input Content"
                                            id="ckeditor1"></textarea>
 
                                 @error('description')
