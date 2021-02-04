@@ -228,7 +228,7 @@
                             <a href="{{ route('subscribes.classifySubscribeByStatus', 3) }}"
                                class="nav-link ">
                                 <i class="nav-icon fas fa-list"></i>
-                                <p>Cancel Subscribe </p>
+                                <p>Done Subscribe </p>
                             </a>
                         </li>
 
@@ -237,7 +237,7 @@
                             <a href="{{ route('subscribes.classifySubscribeByStatus', 4) }}"
                                class="nav-link ">
                                 <i class="nav-icon fas fa-list"></i>
-                                <p>Done Subscribe </p>
+                                <p>Success Subscribe </p>
                             </a>
                         </li>
                     </ul>

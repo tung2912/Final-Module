@@ -104,7 +104,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::post('/changeStatus/{status_id}/', [SubscribeController::class, 'changeStatus'])->name('subscribes.changeStatus');
         Route::get('/SubscribeStatus/{status_id}/', [SubscribeController::class, 'show'])->name('subscribes.showSubscribeStatusById');
         Route::post('/changeStatus/{status}/', [SubscribeController::class, 'changeStatus'])->name('subscribes.changeStatus');
-        Route::get('/SubscribeStatus/{status}/', [SubscribeController::class, 'classifySubscribeByStatus'])->name('subscribes.classifySubscribeByStatus');
+        Route::get('/classifyByStatus/{status}/', [SubscribeController::class, 'classifySubscribeByStatus'])->name('subscribes.classifySubscribeByStatus');
     });
 
     Route::prefix('images')->group(function () {
