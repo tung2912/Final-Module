@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ChangePasswordRequest;
 use App\Http\Requests\UpdateUserRequest;
 use App\Http\Requests\UserRequest;
+use App\Models\City;
 use App\Models\Role;
 use App\Models\RoleConstants;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -88,6 +91,11 @@ class UserController extends Controller
             abort('403', __("You do not have permission"));
         }
 
+        $city = City::where('user_id', $id)->get();
+        if(count($city)) {
+            return redirect()->back()->with('error',"You can not delete this user because of it's city belongs to");
+        }
+
         $user = User::findOrFail($id);
         $user->delete();
         return redirect()->route('users.index');
@@ -103,12 +111,26 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
         $user->name = $request->name;
+        $user->phone = $request->phone;
+        $user->address = $request->address;
         $this->uploadImage($user, $request);
         $user->save();
 
         return redirect()->route('users.profile', $user->id);
     }
 
+    public function changePass() {
+        return view('admin.users.changePass');
+    }
+
+    public function updatePass(ChangePasswordRequest $request) {
+        $id = Auth::user()->id;
+        $user = User::findOrFail($id);
+        $user->password = Hash::make($request->password);
+        $user->save();
+
+        return redirect()->route('users.profile',$id);
+    }
 
     function uploadImage($obj, $request)
     {

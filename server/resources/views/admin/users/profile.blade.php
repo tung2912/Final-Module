@@ -22,13 +22,16 @@
 
                             <ul class="list-group list-group-unbordered mb-3">
                                 <li class="list-group-item">
-                                    <b>Vai trò</b> <a class="float-right">{{$user->role->name}}</a>
+                                    <b>Role</b> <a class="float-right">{{$user->role->name}}</a>
                                 </li>
                                 <li class="list-group-item">
                                     <b>Email</b> <a class="float-right">{{$user->email}}</a>
                                 </li>
                                 <li class="list-group-item">
-                                    <b>Điện thoại</b> <a class="float-right">{{$user->phone?$user->phone:""}}</a>
+                                    <b>Phone</b> <a class="float-right">{{$user->phone ? $user->phone : ""}}</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <b>Address</b> <a class="float-right">{{$user->address ? $user->address : ""}}</a>
                                 </li>
                             </ul>
 

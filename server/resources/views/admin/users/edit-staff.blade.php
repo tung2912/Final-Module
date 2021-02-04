@@ -25,6 +25,20 @@
                                 @enderror
                             </div>
                             <div class="form-group">
+                                <label for="phone">User Phone</label>
+                                <input required value="{{$user->phone}}" type="text" name="phone" id="phone" placeholder="Input User Phone" class="form-control">
+                                @error('phone')
+                                <div style="color: red">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">User Address</label>
+                                <input required value="{{$user->address}}" type="text" name="address" id="address" placeholder="Input User address" class="form-control">
+                                @error('address')
+                                <div style="color: red">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
                                 <label for="inputImage">Image</label>
                                 <input type="file" accept=".png, .jpg, .jpeg" name="image" id="inputImage"
                                        class="form-control @error('image') is-invalid @enderror">
