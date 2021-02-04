@@ -36,7 +36,7 @@ class BlogController extends Controller
         $this->uploadImage2($blog, $request);
         $blog->save();
 
-        return redirect()->route('blogs.index');
+        return redirect()->route('blogs.index')->with('success','Add Successfully');
 
     }
 
@@ -53,14 +53,14 @@ class BlogController extends Controller
         $this->uploadImage2($blog, $request);
         $blog->save();
 
-        return redirect()->route('blogs.index');
+        return redirect()->route('blogs.index')->with('Update','Add Successfully');;
     }
 
     public function delete($id) {
         $blog = Blog::findOrFail($id);
         $blog->delete();
 
-        return redirect()->route('blogs.index');
+        return redirect()->route('blogs.index')->with('warning','Delete Successfully');;
     }
 
     function uploadImage1($obj, $request)

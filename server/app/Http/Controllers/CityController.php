@@ -7,6 +7,7 @@ use App\Models\City;
 use App\Models\User;
 use Illuminate\Http\Request;
 
+
 class CityController extends Controller
 {
     public function  index() {
@@ -30,7 +31,8 @@ class CityController extends Controller
 
         $city->save();
 
-        return redirect()->route('cities.index');
+
+        return redirect()->route('cities.index')->with('success','Add Successfully');
     }
 
     public function edit($id) {
@@ -51,7 +53,7 @@ class CityController extends Controller
 
         $city->save();
 
-        return redirect()->route('cities.index');
+        return redirect()->route('cities.index')->with('success','Update Successfully');;
     }
 
     public function delete($id) {
@@ -59,7 +61,7 @@ class CityController extends Controller
 
         $city->delete();
 
-        return redirect()->route('cities.index');
+        return redirect()->route('cities.index')->with('warning','Delete Successfully');
 
     }
 }

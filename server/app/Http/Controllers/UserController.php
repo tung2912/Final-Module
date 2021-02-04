@@ -52,7 +52,7 @@ class UserController extends Controller
         $this->uploadImage($user, $request);
         $user->save();
 
-        return redirect()->route('users.index');
+        return redirect()->route('users.index')->with('success','Add Successfully');
 
     }
 
@@ -79,7 +79,7 @@ class UserController extends Controller
         $user->role_id = $request->role_id;
         $this->uploadImage($user, $request);
         $user->save();
-        return redirect()->route('users.index');
+        return redirect()->route('users.index')->with('success','Update Successfully');;
     }
 
     public function delete($id)
@@ -90,7 +90,7 @@ class UserController extends Controller
 
         $user = User::findOrFail($id);
         $user->delete();
-        return redirect()->route('users.index');
+        return redirect()->route('users.index')->with('warning','Delete Successfully');;
     }
 
     public function staffEdit($id)
@@ -106,7 +106,7 @@ class UserController extends Controller
         $this->uploadImage($user, $request);
         $user->save();
 
-        return redirect()->route('users.profile', $user->id);
+        return redirect()->route('users.profile', $user->id)->with('success','Update Successfully');;
     }
 
 
