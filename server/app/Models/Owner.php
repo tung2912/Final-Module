@@ -14,4 +14,7 @@ class Owner extends Model
     public function subscribes() {
         return $this->hasMany(Subscribe::class,'owner_id');
     }
+    function getNameImage(){
+        return '/storage/images/' .ltrim($this->image, '/public/images/');
+    }
 }

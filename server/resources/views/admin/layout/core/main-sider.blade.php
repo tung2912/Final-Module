@@ -49,14 +49,14 @@
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
-                            <li class="nav-item">
+                            <li class="nav-item ml-3">
                                 <a href="{{route('users.index')}}"
                                    class="nav-link ">
                                     <i class="nav-icon fas fa-list"></i>
                                     <p>Users List</p>
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item ml-3">
                                 <a href="{{route('users.create')}}"
                                    class="nav-link ">
                                     <i class="nav-icon fas fa-list"></i>
@@ -77,14 +77,14 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item">
+                        <li class="nav-item ml-3">
                             <a href="{{ route('cities.index') }}"
                                class="nav-link ">
                                 <i class="nav-icon fas fa-list"></i>
                                 <p>Cities List</p>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item ml-3">
                             <a href="{{ route('cities.create') }}"
                                class="nav-link ">
                                 <i class="nav-icon fas fa-list"></i>
@@ -103,14 +103,14 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item">
+                        <li class="nav-item ml-3">
                             <a href="{{ route('estates.index') }}"
                                class="nav-link ">
                                 <i class="nav-icon fas fa-list"></i>
                                 <p>Estates List</p>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item ml-3">
                             <a href=" {{ route('estates.classifyEstateByStatus', 1) }}"
                                class="nav-link ">
                                 <i class="nav-icon fas fa-list"></i>
@@ -118,7 +118,7 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
+                        <li class="nav-item ml-3">
                             <a href="{{ route('estates.classifyEstateByStatus', 2) }}"
                                class="nav-link ">
                                 <i class="nav-icon fas fa-list"></i>
@@ -126,7 +126,7 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
+                        <li class="nav-item ml-3">
                             <a href="{{ route('estates.classifyEstateByStatus', 3) }}"
                                class="nav-link ">
                                 <i class="nav-icon fas fa-list"></i>
@@ -135,7 +135,7 @@
                         </li>
 
 
-                        <li class="nav-item">
+                        <li class="nav-item ml-3">
                             <a href="{{ route('estates.classifyEstateByStatus', 4) }}"
                                class="nav-link ">
                                 <i class="nav-icon fas fa-list"></i>
@@ -154,14 +154,14 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item">
+                        <li class="nav-item ml-3">
                             <a href="{{ route('images.index') }}"
                                class="nav-link ">
                                 <i class="nav-icon fas fa-list"></i>
                                 <p>Images List</p>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item ml-3">
                             <a href=" {{ route('images.create') }}"
                                class="nav-link ">
                                 <i class="nav-icon fas fa-list"></i>
@@ -173,7 +173,7 @@
 
                 <li class="nav-item has-treeview ">
                     <a href="#"
-                       class="nav-link">
+                       class="nav-link ">
                         <i class="nav-icon fas fa-dollar-sign"></i>
                         <p>
                             Manage Incomes
@@ -181,7 +181,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item">
+                        <li class="nav-item ml-3">
                             <a href="#"
                                class="nav-link ">
                                 <i class="nav-icon fas fa-list"></i>
@@ -202,7 +202,7 @@
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="{{route('subscribes.index')}}"
-                               class="nav-link ">
+                               class="nav-link ml-3">
                                 <i class="nav-icon fas fa-list"></i>
                                 <p>Subscribes List</p>
                             </a>
@@ -210,13 +210,13 @@
 
                         <li class="nav-item">
                             <a href=" {{ route('subscribes.classifySubscribeByStatus', 1) }}"
-                               class="nav-link ">
+                               class="nav-link ml-3">
                                 <i class="nav-icon fas fa-list"></i>
                                 <p>Waiting Subscribe </p>
                             </a>
                         </li>
 
-                        <li class="nav-item">
+                        <li class="nav-item ml-3">
                             <a href="{{ route('subscribes.classifySubscribeByStatus', 2) }}"
                                class="nav-link ">
                                 <i class="nav-icon fas fa-list"></i>
@@ -224,7 +224,7 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
+                        <li class="nav-item ml-3">
                             <a href="{{ route('subscribes.classifySubscribeByStatus', 3) }}"
                                class="nav-link ">
                                 <i class="nav-icon fas fa-list"></i>
@@ -233,7 +233,7 @@
                         </li>
 
 
-                        <li class="nav-item">
+                        <li class="nav-item ml-3">
                             <a href="{{ route('subscribes.classifySubscribeByStatus', 4) }}"
                                class="nav-link ">
                                 <i class="nav-icon fas fa-list"></i>
@@ -252,7 +252,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item">
+                        <li class="nav-item ml-3">
                             <a href="{{ route('clients.subscribers') }}"
                                class="nav-link ">
                                 <i class="nav-icon fas fa-list"></i>
@@ -260,7 +260,7 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
+                        <li class="nav-item ml-3">
                             <a href="{{ route('clients.owners') }}"
                                class="nav-link ">
                                 <i class="nav-icon fas fa-list"></i>
@@ -279,14 +279,14 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item">
+                        <li class="nav-item ml-3">
                             <a href="{{route('blogs.index')}}"
                                class="nav-link ">
                                 <i class="nav-icon fas fa-list"></i>
                                 <p>Blogs List</p>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item ml-3">
                             <a href="{{route('blogs.create')}}"
                                class="nav-link ">
                                 <i class="nav-icon fas fa-list"></i>

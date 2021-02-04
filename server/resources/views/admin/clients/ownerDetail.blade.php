@@ -25,11 +25,16 @@
                                         <i class="fas fa-minus"></i></button>
                                 </div>
                             </div>
-                            <div class="card-body">
-                                <p><span><i class="far fa-user"></i></span> {{$owner->name}}</p>
-                                <p><span><i class="far fa-envelope"></i></span> {{$owner->email}}</p>
-                                <p><span><i class="fas fa-home"></i></span> {{$owner->address}}</p>
-                                <p><span><i class="fas fa-phone"></i></span> {{$owner->phone}}</p>
+                            <div class="row">
+                                <div class="card-body col-lg-6 col-md-12 col-sm-12">
+                                    <p><span><i style="font-weight: bolder" class="far fa-user"></i></span> {{$owner->name}}</p>
+                                    <p><span><i style="font-weight: bolder" class="far fa-envelope"></i></span> {{$owner->email}}</p>
+                                    <p><span><i style="font-weight: bolder" class="fas fa-home"></i></span> {{$owner->address}}</p>
+                                    <p><span><i style="font-weight: bolder" class="fas fa-phone"></i></span> {{$owner->phone}}</p>
+                                </div>
+                                <div class="col-lg-6 col-md-12 col-sm-12 mt-4">
+                                    <img style="width: 130px" src="{{$owner->image ? $owner->getNameImage():asset('admin_resource/images/userDefault.png')}}" alt="">
+                                </div>
                             </div>
                             <!-- /.card-body -->
                         </div>
