@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="" class="brand-link">
+    <a href="{{ route('admin.dashboard') }}" class="brand-link">
         <img src="{{ asset('admin_resource/dist/img/homeLogoWhite.png') }}" alt="AdminLTE Logo" class="brand-image img-rounded elevation-6"
              style="opacity: .8">
         <span class="brand-text font-weight-bolder" id="textLogo"> Dashboard</span>
@@ -28,15 +28,7 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
-                <li class="nav-item has-treeview">
-                    <a href="#"
-                       class="nav-link">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            Main Dashboard
-                        </p>
-                    </a>
-                </li>
+
                 @if(\Illuminate\Support\Facades\Auth::user()->role_id == \App\Models\RoleConstants::ROLE_ADMIN)
                     <li class="nav-item has-treeview  ">
                         <a href="#"
