@@ -18,6 +18,9 @@
                 <p><span><i class="fas fa-home"></i></span> {{$estate->owner->address}}</p>
                 <p><span><i class="fas fa-phone"></i></span> {{$estate->owner->phone}}</p>
 
+                <a href="{{ route('clients.ownerDetail', $estate->owner->id) }}" class="btn btn-dark mb-2"><i
+                        class="far fa-user"></i> Onwer's Detail</a>
+
             </div>
 
             <div class="col-lg-7 col-md-12 col-sm-12 estate-detail">

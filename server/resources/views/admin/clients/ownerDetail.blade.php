@@ -4,12 +4,46 @@
 
 @section('content')
     <div class="container-fluid">
-        <a href="{{ route('clients.owners') }}" class="btn btn-success mb-2"><i
-            class="far fa-hand-point-left"></i> Back</a>
+
+
+        <!-- owner info -->
+        <section class="content">
+
+                <div class="row">
+                    <div class="col-lg-5 col-md-12 col-sm-12">
+                        <a href="{{ route('clients.owners') }}" class="btn btn-success mb-2"><i
+                                class="far fa-hand-point-left "></i> Back</a>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 ml-5 ">
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <h3 class="card-title">Information</h3>
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool mt-auto" data-card-widget="collapse"
+                                            data-toggle="tooltip" title="Collapse">
+                                        <i class="fas fa-minus"></i></button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p><span><i class="far fa-user"></i></span> {{$owner->name}}</p>
+                                <p><span><i class="far fa-envelope"></i></span> {{$owner->email}}</p>
+                                <p><span><i class="fas fa-home"></i></span> {{$owner->address}}</p>
+                                <p><span><i class="fas fa-phone"></i></span> {{$owner->phone}}</p>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+
+        </section>
+
+{{--        estates that owner had and subscribed--}}
 
         <div class="row">
             <div class="col-lg-5 col-md-12 col-sm-12 estate-owner">
-                <h5 class="mt-2">Subscribed Estates 's </h5>
+                <h5 class="mt-2">Subscribed Estates </h5>
                 <hr>
                 <section class="content">
                     <div class="container-fluid">

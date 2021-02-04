@@ -1,12 +1,14 @@
 @extends('admin.layout.master')
 
-{{--@section('page-title', 'Estate Detail')--}}
+@section('page-title', 'Estate Detail')
 
 @section('content')
 
     <div class="container-fluid">
         <a href="{{ route('subscribes.index') }}" class="btn btn-success mb-2"><i class="far fa-hand-point-left">
             </i> Back</a>
+
+
 
 
         <div class="row">
