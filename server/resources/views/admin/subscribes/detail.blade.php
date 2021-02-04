@@ -21,7 +21,7 @@
             </div>
 
             <div class="col-lg-7 col-md-12 col-sm-12 estate-detail">
-                <h5 class="mt-2">Estate Detail</h5>
+                <h5 class="mt-2">Estate Detail<sup style="font-size: 0.7rem" class="badge badge-danger"> {{$subscribe->estate->getStatus()}}</sup></h5>
                 <hr>
                 <div class="row">
                     <div class="col-7">
@@ -43,29 +43,47 @@
                 <div class="row ml-1">
                     <p><span><i class="far fa-edit"></i></span>{{  $subscribe->estate->description }}</p>
                 </div>
-                <div style="font-size: 1.1rem; letter-spacing: 1px" class="mt-1 badge {{$subscribe->estate->getBadge()}}">
-                    {{$subscribe->estate->getStatus()}}
-                </div>
+
 
             {{-- show image by model bootstrap--}}
 
             <!-- Button trigger modal -->
-                <div class="mt-2">
-                    <button value="{{$subscribe->estate->id}}" type="button" class="btn btn-primary mb-2 details" >
-                        <i class="fas fa-image"></i> Show Images
-                    </button>
-                    <div style="display: none" class="detailHTML{{$subscribe->estate->id}}">
-                        <div class="row">
-                            @forelse($subscribe->estate->images as $image)
-                                <div class="col">
-                                    <img style="width: 100px" src="{{$image->getNameImage()}}" alt="">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="mt-2">
+                            <button value="{{$subscribe->estate->id}}" type="button" class="btn btn-primary mb-2 details" >
+                                <i class="fas fa-image"></i> Show Images
+                            </button>
+                            <div style="display: none" class="detailHTML{{$subscribe->estate->id}}">
+                                <div class="row">
+                                    @forelse($subscribe->estate->images as $image)
+                                        <div class="col">
+                                            <img style="width: 100px" src="{{$image->getNameImage()}}" alt="">
+                                        </div>
+                                    @empty
+                                        <tr>
+                                            <td colspan="3">No data</td>
+                                        </tr>
+                                    @endforelse
                                 </div>
-                            @empty
-                                <tr>
-                                    <td colspan="3">No data</td>
-                                </tr>
-                            @endforelse
+                            </div>
                         </div>
+
+                    </div>
+                    <div class="col-lg-7 col-md-12 col-sm-12 ml-auto">
+                        <form class="form-inline mt-3" action="{{ route('subscribes.changeStatus', $subscribe->id) }}" method="post">
+                            @csrf
+                            <div class="form-group mx-sm-3 mb-2">
+                                <select class="form-control" id="exampleFormControlSelect1" name="status">
+                                    <option value="1">WAITING</option>
+                                    <option value="2">IN PROCESSING</option>
+                                    <option value="3">DONE</option>
+                                    <option value="4">SUCCESS</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary mb-2">Change Status</button>
+
+                        </form>
                     </div>
                 </div>
 
@@ -75,19 +93,7 @@
 
     </div>
 
-    <form class="form-inline mt-3" action="{{ route('subscribes.changeStatus', $subscribe->id) }}" method="post">
-        @csrf
-        <div class="form-group mx-sm-3 mb-2">
-            <select class="form-control" id="exampleFormControlSelect1" name="status">
-                <option value="1">WAITING</option>
-                <option value="2">IN PROCESSING</option>
-                <option value="3">DONE</option>
-                <option value="4">SUCCESS</option>
-            </select>
-        </div>
-        <button type="submit" class="btn btn-primary mb-2">Change Status</button>
 
-    </form>
 
 @endsection
 
