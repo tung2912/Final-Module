@@ -31,6 +31,9 @@
                 <a href="{{route('users.profile',\Illuminate\Support\Facades\Auth::user()->id)}}" class="dropdown-item">
                     <i class="fas fa-user mr-2"></i> Profile
                 </a>
+                <a href="{{route('users.changePass',\Illuminate\Support\Facades\Auth::user()->id)}}" class="dropdown-item">
+                    <i class="fas fa-key mr-2"></i> Change Password
+                </a>
                 <div class="dropdown-divider"></div>
                 <a href="{{route('admin.logout')}}" class="dropdown-item"> <i class="nav-icon fas fa-arrow-circle-left mr-2"></i>Logout</a>
             </div>

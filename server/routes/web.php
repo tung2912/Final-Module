@@ -49,6 +49,8 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::get('/profile/{user_id}', [UserController::class, 'profile'])->name('users.profile');
         Route::get('/staffEdit/{user_id}', [UserController::class, 'staffEdit'])->name('users.staffEdit');
         Route::post('/staffEdit/{user_id}', [UserController::class, 'staffUpdate'])->name('users.staffUpdate');
+        Route::get('/changePass',[UserController::class,'changePass'])->name('users.changePass');
+        Route::post('/changePass',[UserController::class,'updatePass'])->name('users.updatePass');
 
     });
 
