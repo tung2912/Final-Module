@@ -63,7 +63,7 @@
                             </div>
                             <div class="form-group">
                                 <input type="submit" value="Add" class="btn btn-success">
-                                <a href="#" class="btn btn-secondary">Back</a>
+                                <a href="{{route('users.index')}}" class="btn btn-secondary">Back</a>
                             </div>
                         </div>
                         <!-- /.card-body -->
