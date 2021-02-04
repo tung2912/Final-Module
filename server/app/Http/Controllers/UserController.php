@@ -93,12 +93,12 @@ class UserController extends Controller
 
         $city = City::where('user_id', $id)->get();
         if(count($city)) {
-            return redirect()->back()->with('error',"You can not delete this user because of it's city belongs to");
+            return redirect()->back()->with('warning',"This user is managing City");
         }
 
         $user = User::findOrFail($id);
         $user->delete();
-        return redirect()->route('users.index')->with('warning','Delete Successfully');;
+        return redirect()->route('users.index')->with('warning','Delete Successfully');
     }
 
     public function staffEdit($id)
@@ -116,7 +116,7 @@ class UserController extends Controller
         $this->uploadImage($user, $request);
         $user->save();
 
-        return redirect()->route('users.profile', $user->id)->with('success','Update Successfully');;
+        return redirect()->route('users.profile', $user->id)->with('success','Update Successfully');
     }
 
     public function changePass() {
@@ -129,7 +129,7 @@ class UserController extends Controller
         $user->password = Hash::make($request->password);
         $user->save();
 
-        return redirect()->route('users.profile',$id);
+        return redirect()->route('users.profile',$id)->with('success','Update Password Successfully');
     }
 
     function uploadImage($obj, $request)
