@@ -1,3 +1,3 @@
 <footer class="main-footer">
-    <strong> TUNG LUXURY &copy; 2020</strong>
+    <strong> Home &copy; 2021</strong>
 </footer>
