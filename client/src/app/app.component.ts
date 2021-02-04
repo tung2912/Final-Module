@@ -9,6 +9,6 @@ export class AppComponent {
   title = 'Hello App';
 
   constructor() {
-    console.log('reload')
+    console.log('reload');
   }
 }
