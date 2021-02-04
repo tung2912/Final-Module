@@ -45,7 +45,7 @@
 
                             <div class="form-group">
                                 <input type="submit" value="Update" class="btn btn-success">
-                                <a href="#" class="btn btn-secondary">Back</a>
+                                <a href="{{route('users.profile',\Illuminate\Support\Facades\Auth::user()->id)}}" class="btn btn-secondary">Back</a>
                             </div>
                         </div>
                         <!-- /.card-body -->
