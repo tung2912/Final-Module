@@ -179,6 +179,7 @@
     <hr >
     @if(\Illuminate\Support\Facades\Session::has('login-error'))
         <div  style="color: #c13b3b; text-align: center; font-weight: bolder">
+        <div style="color: #c13b3b; text-align: center; font-weight: bolder">
             {{ \Illuminate\Support\Facades\Session::get('login-error') }}
         </div>
     @endif

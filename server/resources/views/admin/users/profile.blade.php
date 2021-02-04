@@ -1,12 +1,11 @@
 @extends('admin.layout.master')
-@section('title','User Profile')
+@section('page-title','User Profile')
 @section('content')
     <section class="content align-items-center">
         <div class="container-fluid">
-            <a href="{{route('users.staffEdit',$user->id)}}" class="btn btn-primary mb-3" style="margin-left: 25%; color: white">Edit Profile</a>
+            <h3 class="text-center text-bold mb-3">USER'S PROFILE</h3>
             <div class="row align-items-center">
                 <div class="col-md-6" style="margin-left: 25%">
-
                     <!-- Profile Image -->
                     <div class="card card-primary card-outline">
                         <div class="card-body box-profile">
@@ -42,12 +41,7 @@
                     <!-- /.card -->
 
                 </div>
-
-                <!-- /.col -->
-                <div class="col-md-8">
-                    <!-- /.nav-tabs-custom -->
-                </div>
-                <!-- /.col -->
+                <a href="{{route('users.staffEdit',$user->id)}}" class="btn btn-primary mb-3" style="margin-left: 25.5%; color: white">Edit Profile</a>
             </div>
 
             <!-- /.row -->
