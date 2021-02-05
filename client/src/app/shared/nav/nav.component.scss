@@ -1,5 +1,4 @@
 
-
 #header {
 
   position: fixed;
@@ -15,13 +14,15 @@
     min-height: 8vh;
     background-color: white;
     transition: .5s ease background-color;
+
     &__brand {
-      & img {
+      img {
         width: 90px;
 
         margin-left: 1rem;
       }
     }
+
     &__nav-bar {
       display: flex;
       align-items: center;
@@ -34,7 +35,7 @@
     }
 
     &__nav-list {
-      & ul {
+      ul {
         list-style: none;
         position: absolute;
         background-color: rgb(145, 145, 145);
@@ -54,58 +55,57 @@
         overflow-x: hidden;
         transition: .5s ease left;
 
-      & li #loginLogout {
-        border: 1.5px solid #e2e2e2;
+        li #loginLogout {
+          border: 1.5px solid #e2e2e2;
 
-        border-radius: 10px;
+          border-radius: 10px;
 
-        padding: 7px;
+          padding: 7px;
 
-        &:hover {
-          background-color: #e2e2e2;
+          &:hover {
+            background-color: #e2e2e2;
 
+          }
         }
-      }
+
         &.active {
           left: 0;
         }
 
-       li {
-
-        border-radius: 10px;
-
-        padding: 7px;
-      }
-        &  a:hover {
-          background-color: #409598;
-
-          padding-top: 8px;
+        li {
 
           border-radius: 10px;
 
+          padding: 7px;
         }
-        & li:hover a::after {
-          transform: translate(-50%,-50%) scale(1);
+
+         a:hover {
+          background-color: #e2e2e2;
+          border-radius: 10px;
+
+        }
+
+         li:hover a::after {
+          transform: translate(-50%, -50%) scale(1);
           letter-spacing: initial;
         }
 
-        & a {
-          font-size: 1.5rem;
+         a {
+          font-size: 2.3rem;
           font-weight: 500;
           letter-spacing: .1rem;
           text-decoration: none;
           color: black;
-          padding: 20px 20px 5px 20px;
           display: block;
-
+          padding: 6px 20px;
 
           &::after {
             content: attr(data-after);
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%) scale(0);
-            color: rgba(240, 248, 255,0.021);
+            transform: translate(-50%, -50%) scale(0);
+            color: rgba(240, 248, 255, 0.021);
             font-size: 9rem;
             letter-spacing: 50px;
             z-index: -1;
@@ -120,7 +120,7 @@
   .hamburger {
     height: 60px;
     width: 60px;
-    display: inline-block;
+    //display: inline-block;
     border: 3px solid black;
     border-radius: 50%;
     position: relative;
@@ -131,6 +131,7 @@
     cursor: pointer;
     transform: scale(.8);
     margin-right: 20px;
+
     &:after {
       position: absolute;
       content: '';
@@ -140,12 +141,14 @@
       border: 3px solid black;
       animation: hamburger_puls 1s ease infinite;
     }
+
     &.active {
       & .bar::before {
-        bottom:0;
+        bottom: 0;
       }
+
       & .bar::after {
-        top:0;
+        top: 0;
       }
     }
 
@@ -166,6 +169,7 @@
         transition: .3s ease;
         transition-property: top, bottom;
       }
+
       &::before {
         content: '';
         position: absolute;
@@ -176,9 +180,11 @@
         transition: .3s ease;
         transition-property: top, bottom;
       }
+
       &::after {
         top: 8px;
       }
+
       &::before {
         bottom: 8px;
       }
@@ -187,13 +193,13 @@
   }
 
 
-  @media screen and(min-width:1200px) {
-    & .hamburger {
+  @media screen and(min-width: 1200px) {
+     .hamburger {
       display: none;
 
     }
 
-    & .header {
+     .header {
       &__nav-list ul {
         position: initial;
         display: block;
@@ -203,21 +209,27 @@
 
         color: black;
 
-         li {
+        li {
           display: inline-block;
-           a {
-            font-size: 1.8rem;
-          }
-           a:hover {
-             color: white;
-           }
 
-           #loginLogout {
-             color: black;
-           }
+          a {
+            font-size: 2rem;
+            padding: 7px 15px 8px 15px;
+          }
+
+          a:hover {
+            color: white;
+
+            border-radius: 10px;
+            background-color: #409598;
+          }
+
+          #loginLogout {
+            color: black;
+          }
         }
 
-        & a::after {
+         a::after {
           display: none;
         }
       }
