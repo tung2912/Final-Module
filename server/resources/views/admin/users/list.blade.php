@@ -37,16 +37,13 @@
                                             <div>
                                                 <a data-placement="top"
                                                    href="{{route('users.profile',$user->id)}}">
-                                                    <i class="nav-icon fas fa-eye"></i>Details
+                                                    <i class="nav-icon fas fa-eye"></i>
                                                 </a>
                                                 <a data-placement="top"
                                                    href="{{route('users.edit',$user->id)}}">
-                                                    <i class="nav-icon fas fa-edit"></i>Edit
+                                                    <i class="nav-icon fas fa-edit"></i>
                                                 </a>
-                                                <a class="text-danger"
-                                                   onclick="return confirm('Are you sure you want to delete')"
-                                                   href="{{route('users.delete',$user->id)}}">
-                                                    <i class="nav-icon far fa-trash-alt"></i>Delete</a>
+                                                <a style="cursor: pointer" class="text-danger" onclick="deleteConfirmation({{$user->id}})"><i class="nav-icon far fa-trash-alt"></i></a>
                                             </div>
                                         </td>
                                 </tr>
@@ -77,5 +74,47 @@
         </div>
         <!-- /.container-fluid -->
     </section>
+@endsection
+@section('js')
+    <script type="text/javascript">
+        function deleteConfirmation(id) {
+            swal.fire({
+                title: "Delete?",
+                text: "Please ensure and then confirm!",
+                type: "warning",
+                showCancelButton: !0,
+                confirmButtonText: "Yes, delete it!",
+                cancelButtonText: "No, cancel!",
+                reverseButtons: !0
+            }).then(function (e) {
+
+                if (e.value === true) {
+                    var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+
+                    $.ajax({
+                        type: 'POST',
+                        url: "{{url('admin/users/delete')}}/" + id,
+                        data: {_token: CSRF_TOKEN},
+                        dataType: 'JSON',
+                        success: function (results) {
+
+                            if (results.success === false) {
+                                swal.fire("Error!", results.message, "error");
+                            } else {
+                                swal.fire("Done!", results.message, "done");
+                                location.reload();
+                            }
+                        }
+                    });
+
+                } else {
+                    e.dismiss;
+                }
+
+            }, function (dismiss) {
+                return false;
+            })
+        }
+    </script>
 @endsection
 

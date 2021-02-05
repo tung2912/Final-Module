@@ -39,7 +39,7 @@
                                                    href="{{route('cities.edit',$city->id)}}" class="mr-3">
                                                     <i class="nav-icon fas fa-edit"></i>Edit
                                                 </a>
-                                                <a class="text-danger"
+                                                <a class="text-danger deleteUser"
                                                    onclick="return confirm('Are you sure you want to delete')"
                                                    href="{{ route('cities.delete', $city->id) }}">
                                                     <i class="nav-icon far fa-trash-alt"></i>Delete</a>
