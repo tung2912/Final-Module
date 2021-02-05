@@ -9,7 +9,7 @@
 
     border-radius: 7px;
 
-    opacity: 0.6;
+    opacity: 0.7;
 
   }
 
@@ -77,3 +77,305 @@
   border-radius: 7px;
 
 }
+
+@media screen and (max-width: 1200px) {
+
+  #banner {
+     .banner-title {
+      font-size: 3rem;
+      font-weight: bolder;
+      letter-spacing: 0.1rem;
+
+    }
+
+     .banner-search {
+
+      & button {
+        height: 4rem;
+        width: 4rem;
+
+
+        & i {
+          font-weight: bolder;
+          font-size: 1.1rem;
+        }
+      }
+
+
+      & input {
+        height: 4rem;
+        width: 23rem;
+        border: 2px solid white;
+
+
+        &::placeholder {
+
+          font-size: 1.2rem;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1065px) {
+
+  #banner {
+    .banner-title {
+      font-size: 2.5rem;
+
+    }
+
+    .banner-search {
+
+      & button {
+        height: 3.5rem;
+        width: 3.5rem;
+
+
+        & i {
+          font-size: 1rem;
+        }
+      }
+
+
+      & input {
+        height: 3.5rem;
+        width: 20rem;
+        border: 2px solid white;
+
+
+        &::placeholder {
+
+          font-size: 1rem;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 905px) {
+
+  #banner {
+    .banner-title {
+      font-size: 2rem;
+
+    }
+
+    .banner-search {
+
+      & button {
+        height: 2.5rem;
+        width: 2.5rem;
+
+
+        & i {
+          font-weight: bolder;
+          font-size: 1.1rem;
+        }
+      }
+
+
+      & input {
+        height: 2.5rem;
+        width: 18rem;
+        border: 2px solid white;
+
+
+        &::placeholder {
+
+          font-size: 0.8rem;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 747px) {
+
+  #banner {
+    .banner-title {
+      font-size: 1.5rem;
+
+    }
+
+    .banner-search {
+
+      & button {
+        height: 2rem;
+        width: 2rem;
+
+        & i {
+          font-weight: bolder;
+          font-size: 1rem;
+        }
+      }
+
+
+      & input {
+        height: 2rem;
+        width: 15rem;
+        border: 2px solid white;
+
+
+
+        &::placeholder {
+
+          font-size: 0.8rem;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 588px) {
+
+  #banner {
+    .banner-title {
+      font-size: 1.3rem;
+
+    }
+
+    .banner-search {
+
+      & button {
+        height: 1.8rem;
+        width: 1.8rem;
+
+        & i {
+          font-weight: bolder;
+          font-size: 1rem;
+        }
+      }
+
+
+      & input {
+        height: 1.8rem;
+        width: 13rem;
+        border: 2px solid white;
+
+        &::placeholder {
+
+          font-size: 0.7rem;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 524px) {
+
+  #banner {
+    .banner-title {
+      font-size: 1.2rem;
+
+    }
+  }
+}
+
+
+@media screen and (max-width: 494px) {
+
+  #banner {
+    .banner-title {
+      font-size: 1.1rem;
+
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+
+  #banner {
+    .banner-title {
+      font-size: 1rem;
+
+    }
+
+    .banner-search {
+        margin-top: 1rem;
+
+      & button {
+        height: 1.5rem;
+        width: 1.5rem;
+
+        & i {
+          font-weight: bolder;
+          font-size: 1rem;
+        }
+      }
+
+
+      & input {
+        height: 1.5rem;
+        width: 12rem;
+        border: 2px solid white;
+
+
+
+        &::placeholder {
+
+          font-size: 0.7rem;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 429px) {
+
+  #banner {
+    .banner-title {
+      font-size: 0.8rem;
+    }
+
+  }
+}
+
+@media screen and (max-width: 365px) {
+
+  #banner {
+    .banner-title {
+      font-size: 0.8rem;
+
+    }
+
+    .banner-search {
+
+      & button {
+        height: 1rem;
+        width: 1rem;
+
+        & i {
+          font-weight: bolder;
+          font-size: 0.8rem;
+        }
+      }
+
+
+      & input {
+        height: 1rem;
+        width: 9rem;
+        border: 2px solid white;
+
+
+        &::placeholder {
+
+          font-size: 0.4rem;
+        }
+      }
+    }
+  }
+
+}
+
