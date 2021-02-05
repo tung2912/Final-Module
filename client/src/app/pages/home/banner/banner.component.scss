@@ -2,6 +2,8 @@
   position: relative;
   text-align: center;
 
+  margin-top: 12vh;
+
   & img {
     width: 100%;
 
@@ -22,18 +24,18 @@
   & .banner-title {
     color: white;
 
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: bolder;
     letter-spacing: 0.1rem;
 
   }
 
   & .banner-search {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
 
     & button {
-      height: 3rem;
-      width: 3rem;
+      height: 4.5rem;
+      width: 4.5rem;
 
       border-radius: 0 8px 8px 0;
       border: none;
@@ -44,23 +46,25 @@
 
       & i {
         font-weight: bolder;
+        font-size: 1.5rem;
       }
     }
 
 
     & input {
-      height: 3rem;
+      height: 4.5rem;
       width: 28rem;
 
       border-radius: 8px 0 0 8px;
-      border: 1px solid black;
+      border: 2px solid white;
 
       outline: none;
 
       &::placeholder {
-        padding-left: 1rem;
+        padding: 3rem 0 0 1rem;
 
-        font-size: 1.3rem;
+        font-size: 2rem;
+        letter-spacing: 2px;
       }
     }
   }
