@@ -8,7 +8,6 @@
   width: 100vw;
   height: auto;
 
-  margin: 0 2rem;
 
   .header {
     min-height: 8vh;
@@ -64,7 +63,6 @@
 
           &:hover {
             background-color: #e2e2e2;
-
           }
         }
 
@@ -73,9 +71,7 @@
         }
 
         li {
-
           border-radius: 10px;
-
           padding: 7px;
         }
 
@@ -83,11 +79,6 @@
           background-color: #e2e2e2;
           border-radius: 10px;
 
-        }
-
-         li:hover a::after {
-          transform: translate(-50%, -50%) scale(1);
-          letter-spacing: initial;
         }
 
          a {
@@ -99,18 +90,6 @@
           display: block;
           padding: 6px 20px;
 
-          &::after {
-            content: attr(data-after);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(0);
-            color: rgba(240, 248, 255, 0.021);
-            font-size: 9rem;
-            letter-spacing: 50px;
-            z-index: -1;
-            transition: .4s ease letter-spacing;
-          }
         }
       }
     }
