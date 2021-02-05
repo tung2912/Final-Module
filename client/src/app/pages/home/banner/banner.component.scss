@@ -23,7 +23,7 @@
 
   & .banner-title {
     color: white;
-
+    text-shadow: 1.5px 3.5px rgba(224,50,50,0.7);
     font-size: 3.5rem;
     font-weight: bolder;
     letter-spacing: 0.1rem;
@@ -72,7 +72,6 @@
 
 
 .banner-wrapper {
-  margin: 1rem 2rem;
 
   background-color: #000000;
   border-radius: 7px;
