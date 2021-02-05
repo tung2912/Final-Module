@@ -9,6 +9,7 @@ use App\Models\City;
 use App\Models\Role;
 use App\Models\RoleConstants;
 use App\Models\User;
+use http\Env\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -92,13 +93,22 @@ class UserController extends Controller
         }
 
         $city = City::where('user_id', $id)->get();
+        $user = User::findOrFail($id);
         if(count($city)) {
-            return redirect()->back()->with('warning',"This user is managing City");
+            $success = false;
+            $message = "This user is managing a city<br><br>Can not delete";
+
+        }
+        else {
+            $user->delete();
+            $success = true;
+            $message = "Deleted successfully";
         }
 
-        $user = User::findOrFail($id);
-        $user->delete();
-        return redirect()->route('users.index')->with('warning','Delete Successfully');
+        return response()->json([
+            "success" => $success,
+            "message" => $message
+        ]);
     }
 
     public function staffEdit($id)
