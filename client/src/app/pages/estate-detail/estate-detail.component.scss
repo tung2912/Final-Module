@@ -1,0 +1,80 @@
+#estatesDetail {
+  margin-top: 10rem;
+
+  margin-left: 4rem;
+  margin-right: 4rem;
+
+  .slideEstate {
+      padding-right: 0;
+      img {
+        width: 100%;
+      }
+  }
+
+  .formEstate {
+    background-color: #dfe6e9;
+
+    form {
+      margin: 0 2rem;
+      line-height: 2rem;
+      text-align: center;
+
+      h3 {
+        text-align: center;
+        padding: 1rem 0;
+      }
+
+      .input-group i {
+        font-size: 2rem;
+      }
+
+      input::placeholder {
+        font-size: 1.3rem;
+      }
+
+      textarea::placeholder {
+        font-size: 1.3rem;
+
+      }
+
+      button {
+        background-color: #cd3333;
+
+        border-radius: 18px;
+        border: none;
+
+        padding: 0.7rem 5rem;
+
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
+
+  }
+}
+
+//============ ESTATE INFORMATION
+
+.estate-info {
+  margin-top: 1.5rem;
+   .estate-text {
+     .estate-price {
+       font-size: 2.5rem;
+       font-weight: bolder;
+     }
+
+     span {
+       font-size: 1.7rem;
+       padding-right: 2rem;
+
+        & i {
+          font-weight: bolder;
+        }
+     }
+
+     .estate-address {
+       font-size: 2rem;
+       font-weight: 600;
+     }
+   }
+}

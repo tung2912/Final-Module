@@ -52,6 +52,7 @@ export class NavComponent implements OnInit, AfterViewInit {
 
   }
 
+  // tslint:disable-next-line:typedef
   toggle() {
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.header .header__nav-bar .header__nav-list ul');

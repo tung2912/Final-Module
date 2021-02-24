@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BannerComponent } from './banner/banner.component';
 import { EstatesListComponent } from './estates-list/estates-list.component';
-import { HighlightsBlogsComponent } from './highlights-blogs/highlights-blogs.component';
 import {HomeComponent} from './home.component';
+import {HighlightsBlogsModule} from '../../shared/components/highlights-blogs/highlights-blogs.module';
 
 
 
@@ -11,16 +11,11 @@ import {HomeComponent} from './home.component';
   declarations: [
     BannerComponent,
     EstatesListComponent,
-    HighlightsBlogsComponent,
     HomeComponent
   ],
-  exports: [
-    BannerComponent,
-    EstatesListComponent,
-    HighlightsBlogsComponent
-  ],
   imports: [
-    CommonModule
+    CommonModule,
+    HighlightsBlogsModule
   ]
 })
 export class HomeModule { }

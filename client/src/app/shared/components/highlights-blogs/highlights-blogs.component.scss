@@ -1,0 +1,254 @@
+#highlightBlogs {
+  margin: 6rem 0 5rem 0;
+
+  .col {
+    text-align: center;
+
+    & .number {
+      margin-top: 2rem;
+      font-size: 3rem;
+
+      color: blue;
+    }
+
+    & .info {
+      font-size: 1.5rem;
+      color: gray;
+    }
+  }
+
+  .blog {
+    margin-top: 5rem;
+    position: relative;
+    text-align: center;
+
+    background-color: #000000;
+
+    & img {
+      width: 100%;
+
+      opacity: 0.6;
+
+    }
+
+    & .blog_info {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      & p {
+        color: white;
+
+        font-size: 2rem;
+        font-weight: bolder;
+
+        margin-bottom: 3rem;
+      }
+
+      & h3 {
+        color: white;
+
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
+      }
+
+      & a {
+        color: white;
+
+        font-size: 1.5rem;
+        font-weight: 500;
+
+        border: 1.5px solid white;
+        border-radius: 20px;
+
+        padding: 8px;
+
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  #highlightBlogs {
+
+    .blog {
+
+      & .blog_info p {
+        font-size: 1rem;
+      }
+
+      & .blog_info h3 {
+        font-size: 2rem;
+
+        margin-bottom: 1.5rem;
+
+      }
+
+      & .blog_info a {
+        font-size: 1rem;
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+  #highlightBlogs {
+
+    .blog {
+
+      & .blog_info p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+
+      }
+
+      & .blog_info h3 {
+        font-size: 1.5rem;
+
+        margin-bottom: 1rem;
+
+      }
+
+      & .blog_info a {
+        font-size: 0.9rem;
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 446px) {
+
+  #highlightBlogs {
+
+    .blog {
+
+      & .blog_info p {
+        font-size: 0.7rem;
+        margin-bottom: 0;
+
+      }
+
+      & .blog_info h3 {
+        font-size: 1rem;
+
+        margin-bottom: 1rem;
+
+      }
+
+      & .blog_info a {
+        font-size: 0.7rem;
+
+        padding: 3px;
+
+      }
+    }
+  }
+}
+
+//=================BLOG LIST====================
+#blogList {
+
+  & .row {
+    margin-top: 2rem;
+
+    & .card {
+      border-top: none;
+
+    }
+
+    & .card-blog {
+      font-weight: bold;
+    }
+  }
+
+  .imgBlog {
+    position: relative;
+    text-align: center;
+    background-color: #000000;
+    border-radius: 7px 7px 0 0;
+    overflow: hidden;
+
+    img {
+      opacity: 0.9;
+    }
+  }
+
+  & .card:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .col-12 {
+    margin-bottom: 1rem;
+  }
+}
+
+
+@media screen and (max-width: 575px) {
+  .col-12 {
+    padding: 0 2rem;
+
+    width: 60%;
+
+    margin-bottom: 2rem;
+  }
+}
+
+//============= TWO BLOGS ===============
+
+#twoBlogs {
+  margin-top: 5rem;
+
+  .blog-img {
+    padding: 0 ;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+   .blog-info {
+
+      .header {
+       margin-top: 25%;
+
+        padding-left: 2rem;
+
+        h3 {
+            font-size: 3rem;
+            font-weight: bolder;
+        }
+
+        p {
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+
+        .discoveringBtn {
+          font-size: 1.5rem;
+          font-weight: bolder;
+
+          border: 1px solid #c41818;
+          border-radius: 20px;
+
+          background-color: #c41818;
+
+          color: white;
+          padding: 10px 20px;
+
+          line-height: 5rem;
+        }
+      }
+  }
+}
+
+
+

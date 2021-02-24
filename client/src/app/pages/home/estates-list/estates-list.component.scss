@@ -1,0 +1,78 @@
+#estateList {
+  margin-top: 6rem;
+
+  & h1 {
+    font-weight: 500;
+  }
+
+  & a {
+    font-size: 1.3rem;
+  }
+
+  & .row {
+    margin-top: 2rem;
+
+    & .card {
+      border-top: none;
+    }
+
+    & .card-text .info {
+      margin-right: 10px;
+
+      & .number {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .imgEstate {
+    position: relative;
+    text-align: center;
+    background-color: #000000;
+    border-radius: 7px 7px 0 0;
+    overflow: hidden;
+
+
+    & img {
+      opacity: 0.8;
+      //border-radius: 15px 15px 0 0;
+
+    }
+
+    & .estatesPrice {
+      position: absolute;
+      bottom: 8px;
+      left: 16px;
+
+      color: white;
+      font-size: 2.5rem;
+      font-weight: bolder;
+
+      letter-spacing: 1px;
+    }
+  }
+
+  & .card:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .col-12 {
+    margin-bottom: 1rem;
+  }
+}
+
+
+@media screen and (max-width: 575px) {
+  .col-12 {
+    padding: 0 2rem;
+
+    width: 60%;
+
+    margin-bottom: 2rem;
+  }
+
+
+}
