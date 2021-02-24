@@ -1,0 +1,96 @@
+#signup {
+  background-color: #e2e0e0;
+  position: relative;
+
+}
+
+.signup {
+
+  &__block {
+    top: 13vh;
+    left: 4%;
+    width: 91%;
+    padding: 20px 10px;
+    border:white;
+    border-radius: 4px;
+    position: absolute;
+    background-color: #F6F6F6;
+  }
+
+  &__title1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+  &__title2 {
+    font-size: 1.7rem;
+    font-weight: 400;
+    opacity: .8;
+  }
+
+  &__line {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__formGroup {
+    margin-top: 10px;
+    &__label {
+      font-weight: 600;
+    }
+    &__input {
+      input {
+        border: 1px solid #C1BDBD;
+        height: 3rem;
+        width: 99%;
+        border-radius: 2px;
+      }
+    }
+  }
+  &__submit {
+    text-align: center;
+    margin-top: 30px;
+  }
+  &__btn {
+
+    font-size: 2.5rem;
+    padding: 8px 60px;
+    background-color: #ffb200;
+    color: #595349;
+    border-radius: 4px;
+
+    font-weight: 400;
+    letter-spacing: 1px;
+    &:hover {
+      opacity: .9;
+    }
+  }
+}
+
+@media screen and(min-width: 768px) {
+  .signup__block {
+    width: 700px;
+    left: 10%;
+  }
+  .signup__line {
+    flex-direction: row;
+  }
+  .signup__formGroup {
+    flex-basis: 48%;
+    margin-right: 2%;
+  }
+  .signup__formGroup__input input {
+    width: 95%;
+  }
+
+}
+@media screen and(min-width: 960px) {
+  .signup__block {
+    left: 20%;
+  }
+}
+
+@media screen and(min-width: 1026px) {
+  .signup__block {
+    left: 22%;
+  }
+}

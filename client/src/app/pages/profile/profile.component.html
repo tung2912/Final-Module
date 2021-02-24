@@ -1,0 +1,25 @@
+
+<div id="profile">
+  <div class="profile">
+    <div class="profile__header">
+      <h1>User Profile</h1>
+    </div>
+    <div class="profile__body">
+      <div class="profile__info">
+        <span class="profile__tag">Email</span>
+        <p class="profile__detail">{{owner.email}}</p>
+      </div>
+      <div class="profile__info">
+        <span class="profile__tag">Phone</span>
+        <p class="profile__detail">{{owner.phone}}</p>
+      </div>
+      <div class="profile__info">
+        <span class="profile__tag">Address</span>
+        <p class="profile__detail">{{owner.address}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="profile__backBtn">
+    <a (click)="backToHome()" class="backBtn">Back </a>
+  </div>
+</div>

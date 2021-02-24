@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 
 import { HomeComponent } from './pages/home/home.component';
 import {NavComponent} from './shared/nav/nav.component';
+import {ProfileComponent} from './pages/profile/profile.component';
+import {SignupComponent} from './pages/signup/signup.component';
 
 
 const ROUTES: Routes = [
@@ -13,8 +15,12 @@ const ROUTES: Routes = [
     component: HomeComponent
   },
   {
-    path: 'nav',
-    component: NavComponent
+    path: 'profile',
+    component: ProfileComponent
+  },
+  {
+    path: 'signup',
+    component: SignupComponent
   }
 ];
 

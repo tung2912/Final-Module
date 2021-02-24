@@ -5,6 +5,12 @@
   margin: 0;
   box-sizing: border-box;
 }
+*:focus {
+  outline: none;
+}
+div {
+  display: block;
+}
 :host {
   display: block;
 }
@@ -34,3 +40,16 @@ p {
   align-items:center;
   justify-content: center;
 }
+
+.ng-invalid:not(form) {
+  border-left: 4px solid red;
+}
+.ng-valid:not(form) {
+  border-left: 4px solid green;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
