@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 
 import { HomeComponent } from './pages/home/home.component';
 import {NavComponent} from './shared/nav/nav.component';
+import {EstatesComponent} from './pages/estates/estates.component';
+import {EstateDetailComponent} from './pages/estate-detail/estate-detail.component';
 import {ProfileComponent} from './pages/profile/profile.component';
 import {SignupComponent} from './pages/signup/signup.component';
 
@@ -15,6 +17,12 @@ const ROUTES: Routes = [
     component: HomeComponent
   },
   {
+    path: 'estatesList',
+    loadChildren: () => import('./pages/estates/estates.module').then(m => m.EstatesModule)
+  },
+  {
+    path: 'estateDetail',
+    component: EstateDetailComponent
     path: 'profile',
     component: ProfileComponent
   },

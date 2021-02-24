@@ -7,6 +7,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { NavComponent } from './shared/nav/nav.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import {HomeModule} from './pages/home/home.module';
+import { EstateDetailComponent } from './pages/estate-detail/estate-detail.component';
+// tslint:disable-next-line:import-spacing
+import  {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -23,12 +26,14 @@ import { SignupComponent } from './pages/signup/signup.component';
     AppComponent,
     NavComponent,
     FooterComponent,
+    EstateDetailComponent
     ProfileComponent,
     SignupComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgbModule
     BrowserAnimationsModule,
     NgbModule,
     FormsModule,
